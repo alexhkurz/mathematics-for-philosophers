@@ -1,0 +1,1086 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Equivalence Relations &#8212; Mathematics for Philosophers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/equivalence-relations';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Algebraic Logic" href="algebraic-logic.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Mathematics for Philosophers</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Equivalence Relations
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="algebraic-logic.html">
+                        Algebraic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="recursion.html">
+                        Recursion
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="set-theory.html">
+                        Set Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="information-theory.html">
+                        Information Theory
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="paradoxes.html">
+                        Paradoxes
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="numbers.html">
+                        Numbers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modal-logic.html">
+                        Modal Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="geometry.html">
+                        Geometry
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="analysis.html">
+                        Analysis
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="non-standard-analysis.html">
+                        Non-Standard Analysis
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="infinity.html">
+                        Infinity
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="intuitionistic-logic.html">
+                        Intuitionistic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="galois-theory.html">
+                        Galois Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="model-theory.html">
+                        Model Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="topology.html">
+                        Topology
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Equivalence Relations
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="algebraic-logic.html">
+                        Algebraic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="recursion.html">
+                        Recursion
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="set-theory.html">
+                        Set Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="information-theory.html">
+                        Information Theory
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="paradoxes.html">
+                        Paradoxes
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="numbers.html">
+                        Numbers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modal-logic.html">
+                        Modal Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="geometry.html">
+                        Geometry
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="analysis.html">
+                        Analysis
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="non-standard-analysis.html">
+                        Non-Standard Analysis
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="infinity.html">
+                        Infinity
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="intuitionistic-logic.html">
+                        Intuitionistic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="galois-theory.html">
+                        Galois Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="model-theory.html">
+                        Model Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="topology.html">
+                        Topology
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Mathematics for Philosophers</p>
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Under Construction</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equivalence Relations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algebraic-logic.html">Algebraic Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Planned</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="set-theory.html">Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="information-theory.html">Information Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paradoxes.html">Paradoxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modal-logic.html">Modal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Possibly of Interest</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">Geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="non-standard-analysis.html">Non-Standard Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="infinity.html">Infinity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intuitionistic-logic.html">Intuitionistic Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galois-theory.html">Galois Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model-theory.html">Model Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology.html">Topology</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/alexhkurz/mathematics-for-philosophers/" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/alexhkurz/mathematics-for-philosophers//issues/new?title=Issue%20on%20page%20%2Fcontents/equivalence-relations.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/contents/equivalence-relations.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Equivalence Relations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-order-logic">
+   First-Order Logic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naive-set-theory">
+   Naive Set Theory
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-order-logic-and-set-theory">
+     1) First-Order Logic and Set Theory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-rational-number-is-a-set">
+     2) A Rational Number is a Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#review-definition-by-equivalance-class">
+     3) Review: Definition by equivalance class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-calculate-with-equivalence-classes">
+     4) How to Calculate with Equivalence Classes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excursion-into-history">
+     5) Excursion into History
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-to-come-here">
+     6) … &lt; more to come here &gt; …
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epilogue">
+   Epilogue
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#appendix-formal-set-theory">
+   Appendix: Formal Set Theory
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section class="tex2jax_ignore mathjax_ignore" id="equivalence-relations">
+<h1>Equivalence Relations<a class="headerlink" href="#equivalence-relations" title="Permalink to this headline">#</a></h1>
+<p>(… preliminary notes, to be resumed …)</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>In his <a class="reference external" href="https://www.gutenberg.org/cache/epub/10615/pg10615-images.html"><em>An Essay Concerning Humane Understanding</em></a>, Book 2, Chapter 12 <em>On Identity and Diversity</em>, Section 12 <em>Consciousness makes personal Identity</em>, Locke writes (my emphasis):</p>
+<blockquote>
+<div><p><em>in all these cases, our consciousness being interrupted, and we losing the sight of our past selves, doubts are raised whether we are the <strong>same thinking thing</strong>, i.e. the same SUBSTANCE or no. Which, however reasonable or unreasonable, concerns not <strong>PERSONAL identity</strong> at all. The question being what makes the <strong>same person</strong>; and not whether it be the <strong>same identical substance</strong>, which always thinks in the same person, which, in this case, matters not at all: <strong>different</strong> substances, by the <strong>same consciousness</strong> (where they do partake in it) being <strong>united into one person</strong>, as well as <strong>different bodies</strong> by the <strong>same life</strong> are <strong>united into one animal</strong>, whose identity is <strong>preserved in that change</strong> of substances by the <strong>unity of one</strong> continued life</em></p>
+</div></blockquote>
+<p>A few observations: 1) The text is difficult. 2) It is not clear whether the adjectives “same”, “different”, “united into” have a fixed meaning or change their meaning dependent on the nouns “substance”, “person”, “consciousness”, “bodies”, “animal” and “life”. 3) As it often happens in philosophy, the author tries to illuminate one difficult notion (identity) by bringing in other unexplained notions (no less difficult) such as consciousness, person, preservation in change, life, unity.</p>
+<p>I want to emphasize the last item. As it is often the case, in every day reasoning or in philosophy or even in the sciences, it is all to easy to run into a <strong>circle of explanations</strong>. <a class="footnote-reference brackets" href="#circleexplanations" id="id1">1</a> To explain how mathematicians are able to break the circle of explanations is one of the main aims of these notes. <a class="footnote-reference brackets" href="#circleexplanations2" id="id2">2</a></p>
+<p>At this point, I wanted to understand better what philosophers have to say about identity in general and continued with the <a class="reference external" href="https://plato.stanford.edu/entries/identity/#LogiIden">SEP on the Logic of Identity</a> (my emphasis):</p>
+<blockquote>
+<div><p><em>Numerical identity can be characterised, as just done, as the <strong>relation</strong> everything has to itself and to nothing else. But this is circular, since “nothing else” just means “no numerically non-identical thing”. It can be defined, equally circularly (because <strong>quantifying</strong> over all <strong>equivalence relations</strong> including itself), as the <strong>smallest equivalence relation</strong> (an equivalence relation being one which is <strong>reflexive, symmetric and transitive,</strong> for example, having the same shape). Other circular definitions are available. Usually it is defined as the equivalence relation (or: the reflexive relation) satisfying Leibniz’s Law, the principle of the indiscernibility of identicals, that if x is identical with y then everything true of x is true of y. Intuitively this is right, but only picks out identity uniquely if “what is true of x” is understood to include “being identical with x”; otherwise it is <strong>too weak</strong>. Circularity is thus not avoided. Nevertheless, Leibniz’s Law appears to be crucial to our understanding of identity, and, more particularly, to our understanding of distinctness: we exhibit our commitment to it whenever we infer from “Fa” and “Not-Fb” that a is not identical with b. Strictly, what is being employed in such inferences is the <strong>contrapositive</strong> of Leibniz’s Law (if something true of a is false of b, a is not identical with b), which some (in the context of the discussion of vague identity) have questioned, but it appears as indispensable to our grip on the concept of identity as Leibniz’s Law itself.</em></p>
+</div></blockquote>
+<p>At this point, one may ask whether, again, one notion is “explained” by introducing other unexplained notions. But this time the situation is different. First-order logic and set theory can be used to provide rigorous mathematical definitions.</p>
+<p>This is what we outline in the following.</p>
+<p>The claim of this note is that understanding mathematics is essential to understanding what philosophers write about identity. Whether it helps to solve the philsophical problems is another matter.</p>
+</section>
+<section id="first-order-logic">
+<h2>First-Order Logic<a class="headerlink" href="#first-order-logic" title="Permalink to this headline">#</a></h2>
+<p>Before coming to set theory, I give a quick review of first-order logic. This is not meant to be self-contained, rather I would like to assume that the reader has taken the equivalent of an undergraduate course on symbolic logic (in which case I recommend to skip this section).</p>
+<p>In fact, instead of writing out new notes, I link to my notes on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SkIp4pL3w">Discrete Mathematics (Logic and Relations)</a> I use in an undergraduate course <em>Programming Languages</em>.</p>
+</section>
+<section id="naive-set-theory">
+<h2>Naive Set Theory<a class="headerlink" href="#naive-set-theory" title="Permalink to this headline">#</a></h2>
+<p>My initial understanding was that naive set theory suffices to clarify the philosophical discussion of the SEP entry and there will be no need to dive into formal set theory which we will briefly discuss in an appendix. <a class="footnote-reference brackets" href="#naivesetheory" id="id3">3</a> But while giving the course, it became clear that much of the philosophical interest in first-order logic and set theory depends on whether the formal development of mathematics can successfully break the circle of explanations. So I ended up trying to balance the rope between naive set theory and formal set theory as follows. I used the notation of formal set theory; I use it in an informal way, but I tried to explain how it can be formalised if one is willing to put in the (admittedly large) effort; I often referred informally to software tools for which proofs are programs and which can verify mathematical proofs.</p>
+<section id="first-order-logic-and-set-theory">
+<h3>1) First-Order Logic and Set Theory<a class="headerlink" href="#first-order-logic-and-set-theory" title="Permalink to this headline">#</a></h3>
+<p>Quick review of logic. Very rough sketch of how to build up mathematics from logic and set theory. <a class="footnote-reference brackets" href="#first" id="id4">4</a> The difference between <span class="math notranslate nohighlight">\(\subseteq\)</span> and <span class="math notranslate nohighlight">\(\in\)</span>. That sets can be elements of sets. How to define numbers in set theory. The axiom defining the empty set <span class="math notranslate nohighlight">\(\emptyset\)</span>.</p>
+<p>Review: <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SkIp4pL3w">Logic</a> and <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/B1QX46L3P">Set Theory</a>.</p>
+</section>
+<section id="a-rational-number-is-a-set">
+<h3>2) A Rational Number is a Set<a class="headerlink" href="#a-rational-number-is-a-set" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Functions and relations (partly from my <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJ1cc-dDr">notes on Relations</a>). How to extend first-order logic by theories. Example: set theory extends FOL by adding the relation symbol <span class="math notranslate nohighlight">\(\in\)</span> (plus a little more) and  axioms).</p></li>
+<li><p>The axiomatic method. How the axiomatic method breaks circular definitions (first, by building up theories “from below”, second,  by breaking the “circle of explanations”).</p></li>
+<li><p>Short digression on the difference between explicit definitions (such as <span class="math notranslate nohighlight">\(\subseteq\)</span> from <span class="math notranslate nohighlight">\(\in\)</span>) and  implicit definitions (such as the empty set as the unique set satisfying <span class="math notranslate nohighlight">\(\neg\exists x \,.\, x\in\emptyset\)</span>). Further digression on explicit definitions <span class="math notranslate nohighlight">\(x=0\)</span> and implicit definitions <span class="math notranslate nohighlight">\((x + 2)\cdot 3 = 6\)</span> and that arithmetic is special in that we can solve equations, that is, turn implicit defitions into explicit ones.</p></li>
+<li><p>Difference between the logical equality  <span class="math notranslate nohighlight">\(=\)</span> built into first-order logic and a new relation symbol <span class="math notranslate nohighlight">\(\equiv\)</span> that represents an equivalence relation. We introduced equivalence relations by saying that to understand a statement such as <span class="math notranslate nohighlight">\(1+1=2\)</span> we need to acknowledge that, when we go back to the beginning, <span class="math notranslate nohighlight">\(1+1\)</span> is different from <span class="math notranslate nohighlight">\(2\)</span> (certainly, they are different as strings), so let us, just to be careful, replace <span class="math notranslate nohighlight">\(=\)</span> by a new symbol <span class="math notranslate nohighlight">\(\equiv\)</span> and write <span class="math notranslate nohighlight">\(1+1\equiv 2\)</span> instead (and <span class="math notranslate nohighlight">\(1+1\not=2\)</span>).</p></li>
+<li><p>To get a different but more familiar and substantial example we turned to fractions and rational numbers. A fraction is a pair <span class="math notranslate nohighlight">\((a,b)\)</span>, for example, we write now <span class="math notranslate nohighlight">\((1,2)\)</span> instead of <span class="math notranslate nohighlight">\(\frac 1 2\)</span>. We use now <span class="math notranslate nohighlight">\(=\)</span> for the ordinary equality of integers (and we allow ourselves addition and multiplication of integers, we now do have again <span class="math notranslate nohighlight">\(1+1=2\)</span> and all the other equations of integer arithmetic). We extend <span class="math notranslate nohighlight">\(=\)</span> to pairs by saying that <span class="math notranslate nohighlight">\((a,b)=(c,d)\)</span> if <span class="math notranslate nohighlight">\(a=c\)</span> and <span class="math notranslate nohighlight">\(b=d\)</span>. But this is not the right equality for fractions, for example we want <span class="math notranslate nohighlight">\(\frac 1 2 = \frac 2 4\)</span>, or, in our new notation <span class="math notranslate nohighlight">\((1,2) \equiv (2,4)\)</span>.</p></li>
+<li><p>Notice that to conduct our detailed analysis of identity of fractions, we need to distinguish <span class="math notranslate nohighlight">\(=\)</span> and <span class="math notranslate nohighlight">\(\equiv\)</span>. Once we understand identity of fractions, we can blur this distinction again, but, for now, we are in the situation where we have
+$<span class="math notranslate nohighlight">\((1,2)\not=(2,4) \ \ \ \textrm{but want} \ \ \ (1,2)\equiv(2,4)\)</span>$</p></li>
+<li><p>How to define <span class="math notranslate nohighlight">\(\equiv\)</span>. Notice that we want to say that <span class="math notranslate nohighlight">\((a,b)\equiv(c,d)\)</span> if <span class="math notranslate nohighlight">\(a\)</span> divided <span class="math notranslate nohighlight">\(b\)</span> equals <span class="math notranslate nohighlight">\(c\)</span> devided by <span class="math notranslate nohighlight">\(d\)</span>. But that would be circular: The definition of fractions should not be based on already assuming that we know how to divide (after all we want to define fractions in order to be able to do division of integers). What can we we do?</p></li>
+<li><p>We notice that in ordinary mathematics (but this notation is not available at the current stage of our development of formal mathematics), we have <span class="math notranslate nohighlight">\(\frac a b = \frac c d\)</span> if and only if <span class="math notranslate nohighlight">\(a\cdot d= b\cdot c\)</span>. Remember that we do assume that we have multiplication of integers available. With this trick, we can break the circle of explanations and define:
+$<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if } \ \ a\cdot d=b\cdot c\)</span>$</p></li>
+<li><p>We went on to define equivalence classes <a class="footnote-reference brackets" href="#class" id="id5">5</a> $<span class="math notranslate nohighlight">\([(a,b)]_\equiv=\{(c,d) \mid (a,b)\equiv (c,d)\}\)</span>$</p></li>
+<li><p>We can now define the rational numbers as the set of equivalence classes <span class="math notranslate nohighlight">\([(a,b)]_\equiv\)</span> where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary integer and <span class="math notranslate nohighlight">\(b\)</span> is a positive integer. (We need to insist that <span class="math notranslate nohighlight">\(b\not=0\)</span>.)</p></li>
+</ul>
+<p>At this stage there is a lot to reflect upon. We finished with a short summary and promised to come back to all of this in the next session.</p>
+</section>
+<section id="review-definition-by-equivalance-class">
+<h3>3) Review: Definition by equivalance class<a class="headerlink" href="#review-definition-by-equivalance-class" title="Permalink to this headline">#</a></h3>
+<p>We reviewed everything we have done so far and added one important bullet point (and several footnotes):</p>
+<ul class="simple">
+<li><p>Finally, we have
+$<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if and only if } \ \ [(a,b)]_\equiv = [(c,d)]_\equiv\)</span>$</p></li>
+</ul>
+<p><em>Notice that from now on, we can use <span class="math notranslate nohighlight">\(=\)</span> again instead of <span class="math notranslate nohighlight">\(\equiv\)</span> since equivalence of fractions (left-hand side) is (“if and only if”) identity of equivalence classes (right-hand side).</em></p>
+<p>Notice that the sentence above contains three different notions of identity, namely, <span class="math notranslate nohighlight">\(\equiv\)</span> and <span class="math notranslate nohighlight">\(=\)</span> and “is”. <a class="footnote-reference brackets" href="#discuss" id="id6">6</a></p>
+</section>
+<section id="how-to-calculate-with-equivalence-classes">
+<h3>4) How to Calculate with Equivalence Classes<a class="headerlink" href="#how-to-calculate-with-equivalence-classes" title="Permalink to this headline">#</a></h3>
+<p>In this session, we dive into some technical work and show that the rational numbers (as defined via equivalence classes) satisfy indeed the usual rules of arithmetic.</p>
+<ul class="simple">
+<li><p>Review: The rational number <span class="math notranslate nohighlight">\(\frac a b\)</span> is  set of all representations equivalent to <span class="math notranslate nohighlight">\(\frac a b\)</span>.</p></li>
+<li><p>We want to show that to multiply two rational numbers, it doesnt matter which representatives one chooses. That is, we want to prove that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[(a,b)\equiv (a',b') \ \  \&amp; \ \  (c,d) \equiv (c',d') \ \ \ \ \Longrightarrow \ \ \ \ (a\cdot c,b\cdot d)\equiv (a'\cdot c',b'\cdot d')\]</div>
+<p><em>Exercise:</em> Prove the statement above. Answer in the footnote.<a class="footnote-reference brackets" href="#abcd" id="id7">7</a></p>
+<p><em>Exercise:</em> Think about why in the proof above, one cannot replace “<span class="math notranslate nohighlight">\(\cdot\)</span>” by “<span class="math notranslate nohighlight">\(+\)</span>”.</p>
+<p>But, of course, we know (from our pre-understanding of fractions) that we can add fractions.</p>
+<p><em>Homework:</em> Prove that addition of rational numbers is independent of choice of representatives of equivalence classes.</p>
+<p>Answer in the footnote.<a class="footnote-reference brackets" href="#ad-bc" id="id8">8</a></p>
+<p><em>To summarize</em>, whatever <span class="math notranslate nohighlight">\(\equiv\)</span> and whatever the operation <span class="math notranslate nohighlight">\(\diamond\)</span>, to show that the operation <span class="math notranslate nohighlight">\(\diamond\)</span> can be extended to equivalence classes one needs to show that <span class="math notranslate nohighlight">\(\diamond\)</span> is independent of choice of representative, that is,</p>
+<div class="math notranslate nohighlight">
+\[\frac {t\equiv t' \ \ \ \ s \equiv s'} {t\diamond s \equiv t'\diamond s'}\]</div>
+<p>Thus, we not only formalized arithmetic on rational numbers, we also learned a general method of defining mathematical objects as equivalence classes and how to compute with such equivalence classes.</p>
+</section>
+<section id="excursion-into-history">
+<h3>5) Excursion into History<a class="headerlink" href="#excursion-into-history" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Dedekind’s <a class="reference external" href="http://www.opera-platonis.de/dedekind/Dedekind_Was_sind_2.pdf">Was sind und was sollen die Zahlen?</a> introduces the natural numbers (in a naive set theory that we know today can easily be completely formalized). <a class="footnote-reference brackets" href="#dedekind" id="id9">9</a></p></li>
+<li><p>The history of equivalence relations is discussed in Section 3 of Asghari’s <a class="reference external" href="https://link.springer.com/article/10.1007/s11229-018-1674-2">Equivalence: an attempt at a history of the idea</a> …</p></li>
+<li><p>The SEP:</p>
+<ul>
+<li><p><a class="reference external" href="https://plato.stanford.edu/entries/computing-history/">The Modern History of Computing</a></p></li>
+<li><p><a class="reference external" href="https://plato.stanford.edu/entries/dedekind-foundations/">Dedekind</a> and <a class="reference external" href="https://plato.stanford.edu/entries/settheory-early/">The Early Development of Set Theory</a></p></li>
+<li><p><a class="reference external" href="https://plato.stanford.edu/entries/russell-paradox/">Russell’s Paradox</a> and <a class="reference external" href="https://plato.stanford.edu/entries/self-reference/">Self-Reference</a></p></li>
+</ul>
+</li>
+</ul>
+<p>… &lt; more to come here &gt; …</p>
+</section>
+<section id="more-to-come-here">
+<h3>6) … &lt; more to come here &gt; …<a class="headerlink" href="#more-to-come-here" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="epilogue">
+<h2>Epilogue<a class="headerlink" href="#epilogue" title="Permalink to this headline">#</a></h2>
+<p>I want to come back to the question whether the formalization of mathematics was successful at breaking the circle of explanations. My short answer: Yes, from an engineering point of view. No, from a mathematical/logical point of view. No, from a philosophical point of view.</p>
+<p>From an engineering point of view, the success of software tools that are able to do mathematics shows that the circle of explanations can be broken down to simple operations on strings that can be performed on any computer.</p>
+<p>From a mathematical/logical point of view, Goedel’s incompleteness theorem shows that there can be no mathematical proof that the formalization of mathematics breaks the circle of explanations successfully. <a class="footnote-reference brackets" href="#goedel" id="id10">10</a></p>
+<p>From a philosophical point of view, we need to view mathematics as a human activity. In this view, breaking the circle of explanations appears to be  a trick. For example, when we defined equality of fractions in order to define the rational numbers, we found the formal definition
+$<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if } \ \ a\cdot d=b\cdot c\)</span>$</p>
+<p>only by using our informal pre-understanding of fractions which told us that
+$<span class="math notranslate nohighlight">\(\frac a b = \frac c d \ \ \ \Longleftrightarrow \ \ \ \  a\cdot d=b\cdot c\)</span>$</p>
+<p>Mathematicians and software engineers may be  happy with this trick that Wittgenstein called throwing <a class="reference external" href="https://people.umass.edu/klement/tlp/tlp-hyperlinked.html#p6.54GER">“away the ladder after he has climbed up it”</a>, but as Wittgenstein himself admitted, this is not a philosphical interesting attitude: <a class="reference external" href="https://people.umass.edu/klement/tlp/tlp-hyperlinked.html#p7GER">“Whereof one cannot speak, thereof one must be silent”</a>. <a class="footnote-reference brackets" href="#wittgenstein" id="id11">11</a></p>
+</section>
+<section id="appendix-formal-set-theory">
+<h2>Appendix: Formal Set Theory<a class="headerlink" href="#appendix-formal-set-theory" title="Permalink to this headline">#</a></h2>
+<p>I never taught a course on set theory, so I cannot confidently make recommendations of what the best textbooks and resources are. I select some that are available online and look reasonable.</p>
+<p>To see how a formal develop of set theory looks like try <a class="reference external" href="https://www.math.toronto.edu/weiss/set_theory.pdf">An Introduction to Set Theory</a> by William Weiss. Maybe start with the essence, the 11 axioms on page 117.</p>
+<p>After that, a shorter and more gentle introduction is <a class="reference external" href="https://math.berkeley.edu/~seanm/ZF_notes.pdf">Introduction to Set Theory</a> by Sean Murphy (contains some typos but seems to strike a good balance between formal development and explanation).</p>
+<p>Further explanations and background are in <a class="reference external" href="https://en.wikipedia.org/wiki/Set_theory">Wikipedia</a> and at the <a class="reference external" href="https://plato.stanford.edu/entries/set-theory/">SEP</a>.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="circleexplanations"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>… more examples …</p>
+</dd>
+<dt class="label" id="circleexplanations2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Even in mathematics, one can have a discussion of how successful exactly the endeavor of breaking the circle of explanations was. Certainly, breaking the circle of explanations comes at a price and requires, from a philosophical point of view, compromise. But a practical proof that it can be done is given by the modern AI systems that are able to do mathematics. Maybe we can come back to this at the end of this course.</p>
+</dd>
+<dt class="label" id="naivesetheory"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Naive set theory mixes logic and mathematics in an intuitive way without clarifying their relationship. Formal set theory starts from a small set of operations on strings (which can all easily be implemented on a computer), bootstraps from there first-order logic as a set of rules of string manipulation, defines set theory as one particular theory in first-order logic and goes on to show that all of mathematics can be encoded in set theory. Formal set theory is important because it separates mathematics from meta-mathematics (mathematics about mathematics), object language from meta-language, etc. This, in turn, allows us to escape the <a class="reference external" href="https://plato.stanford.edu/entries/russell-paradox/">famous paradoxes</a>. It also helps to establish set theory as a beautiful and rich area of mathematics in its own right.</p>
+</dd>
+<dt class="label" id="first"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>We only introduced part of the language of set theory <span class="math notranslate nohighlight">\(\wedge, \vee, \neg, \forall,\exists, =\)</span> plus notation for the empty set <span class="math notranslate nohighlight">\(\emptyset\)</span> and comprehension <span class="math notranslate nohighlight">\(\{\ldots\}\)</span>. We talked about defining natural numbers and predicates such as <span class="math notranslate nohighlight">\(Even(x)\)</span>.</p>
+</dd>
+<dt class="label" id="class"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Here <em>class</em> is just another word for set, used for historical reasons. It would be perfectly fine to say “equivalence set” if it was not a very unusual expression. (Footnote: In set theory one sometimes makes a subtle distinction between sets and classes, but this is not relevant for our purposes.)</p>
+</dd>
+<dt class="label" id="discuss"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Discuss whether we were able to break the circle of explanations.</p>
+</dd>
+<dt class="label" id="abcd"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p><img alt="" src="https://hackmd.io/_uploads/r1wAYq5Fj.jpg" /></p>
+</dd>
+<dt class="label" id="ad-bc"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p><img alt="" src="https://hackmd.io/_uploads/r1JaFqcYj.jpg" /></p>
+</dd>
+<dt class="label" id="dedekind"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dd><p>On page 379 one finds of <a class="reference external" href="https://gdz.sub.uni-goettingen.de/id/PPN23569441X">this edition</a>.</p>
+<p><img alt="" src="https://i.imgur.com/j5oQtJw.png" /></p>
+<p>We see that Dedekind does recursion on the second argument, uses <span class="math notranslate nohighlight">\(1\)</span> as its base case instead of <span class="math notranslate nohighlight">\(0\)</span>, and writes <span class="math notranslate nohighlight">\('\)</span> for successor. Multiplication is treated similarly on page 382.</p>
+</dd>
+<dt class="label" id="goedel"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
+<dd><p>One should discuss whether the theorems of Goedel and Gentzen can be understood as a <em>philosophical</em> argument in favour of the success of breaking the circle of explanations.</p>
+</dd>
+<dt class="label" id="wittgenstein"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dd><p>There are several hyperlinkded online editions of the Tractatus that visualize its tree structure: <a class="reference external" href="https://pbellon.github.io/tractatus-tree/#/">Pierre Bellon</a>, <a class="reference external" href="https://tractatus.xyz/">hhfpatrick</a>. I found these links via the <a class="reference external" href="http://tractatus.lib.uiowa.edu/">University of Iowa Tractatus Map</a> which also have a <a class="reference external" href="http://tractatus.lib.uiowa.edu/map/">beautiful map of the Tractatus</a>.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Introduction</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="algebraic-logic.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Algebraic Logic</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-order-logic">
+   First-Order Logic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naive-set-theory">
+   Naive Set Theory
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-order-logic-and-set-theory">
+     1) First-Order Logic and Set Theory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-rational-number-is-a-set">
+     2) A Rational Number is a Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#review-definition-by-equivalance-class">
+     3) Review: Definition by equivalance class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-calculate-with-equivalence-classes">
+     4) How to Calculate with Equivalence Classes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excursion-into-history">
+     5) Excursion into History
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-to-come-here">
+     6) … &lt; more to come here &gt; …
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epilogue">
+   Epilogue
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#appendix-formal-set-theory">
+   Appendix: Formal Set Theory
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Kurz and Johanna Speiser
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
