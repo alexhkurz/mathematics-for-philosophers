@@ -1,0 +1,30 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+# https://jupyterbook.org/en/stable/structure/configure.html
+
+format: jb-book
+root: intro.md
+
+parts:
+- caption: Under Construction
+  chapters:
+  - file: contents/equivalence-relations.md
+  - file: contents/algebraic-logic.md
+- caption: Planned
+  chapters:
+  - file: contents/recursion.md
+  - file: contents/set-theory.md
+  - file: contents/information-theory.md
+  - file: contents/paradoxes.md
+  - file: contents/numbers.md
+  - file: contents/modal-logic.md
+- caption:  Possibly of Interest
+  chapters:
+  - file: contents/geometry.md
+  - file: contents/analysis.md
+  - file: contents/non-standard-analysis.md
+  - file: contents/infinity.md
+  - file: contents/intuitionistic-logic.md
+  - file: contents/galois-theory.md
+  - file: contents/model-theory.md
+  - file: contents/topology.md

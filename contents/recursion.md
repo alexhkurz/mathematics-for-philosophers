@@ -1,0 +1,3 @@
+# Recursion
+
+we did do some work on Goedel, Escher, Bach ... to be resumed at some point ...
