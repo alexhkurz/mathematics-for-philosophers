@@ -16,6 +16,7 @@ a\cdot(b\cdot c) = (a\cdot b) \cdot c
 For example, numbers with $e=0$ and $\cdot$ as $+$ are a monoid. Similarly, numbers with $1$ and multiplication are a monoid or truthvalues with *False* and *Or* and truth values with *True* and *And*.
 
 These are also example of what is known as a commutative monoid. A **commutative monoid** $(A,e,\cdot)$ is a monoid that is commutative, that is, it satifies
+
 $$a\cdot b= b\cdot a$$
 
 for all $a,b\in A$.
@@ -39,6 +40,7 @@ We arrived at the algebraic definition of a (bounded) semilattice, that is, a de
 ### What is an order?
 
 A **pre-order** $(A,R)$ consists of a set $A$ together with a relation [^times]
+
 $$R\subseteq A\times A$$
 
 [^times]:$A\times B = \{(a,b) \mid a\in A, b\in B\}$. And $X\subseteq Y$ means that $x\in X\Rightarrow x\in Y$.
@@ -60,6 +62,7 @@ a\le b, b\le c \ \ \Longrightarrow \ \ a \le c
 \end{gather}
 
 A **partial order** $(A,\le)$ is a pre-order such that 
+
 $$a\le b, b\le a \ \Longrightarrow \ a=b$$
 
 
@@ -67,6 +70,7 @@ $$a\le b, b\le a \ \Longrightarrow \ a=b$$
 ### Semilattices
 
 In an order $(A,\le)$, an element $c\in A$ is an **upper bound** of $a$ and $b$ if $a\le c$ and $b\le c$. If for all $d\in A$ we have
+
 $$a\le d,b\le d \ \Longrightarrow \ c\le d$$
 
 then $c$ is called a **least** upper bound.
@@ -75,10 +79,12 @@ then $c$ is called a **least** upper bound.
 
 *Notation:* The least upper bound of $a$ and $b$ is denoted by $a\vee b$.
 
-*Remind:* Let us recall or-introduction 
+*Reminder:* Let us recall or-introduction 
+
 $$\frac a {a\vee b} \quad\quad \frac b {a \vee b}$$
 
 and or-elimination
+
 $$\frac {a\vee b \quad \frac {a}{d} \quad \frac{b}{d}} d$$
 
 A **join-semilattice** is a partial order in which any two elements have a least upper bound.

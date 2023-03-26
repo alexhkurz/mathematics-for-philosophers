@@ -746,15 +746,16 @@ title="Print to PDF"
 <h2>Universal Algebraic Definition of Semilattice<a class="headerlink" href="#universal-algebraic-definition-of-semilattice" title="Permalink to this headline">#</a></h2>
 <p>In <em>universal algebra</em>, one studies sets <span class="math notranslate nohighlight">\(A\)</span> equipped with operations, which are subject to equations.</p>
 <p><strong>Definition:</strong> A <strong>monoid</strong> <span class="math notranslate nohighlight">\((A,e,\cdot)\)</span> has a constant <span class="math notranslate nohighlight">\(e\in A\)</span> and a binary operation <span class="math notranslate nohighlight">\(\cdot:A\times A\to A\)</span> satisfing the equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4356b3e8-2783-41c1-a111-193166367f4a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-4356b3e8-2783-41c1-a111-193166367f4a" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-0bffd858-65cb-425c-b8cd-43c7de43400f">
+<span class="eqno">(1)<a class="headerlink" href="#equation-0bffd858-65cb-425c-b8cd-43c7de43400f" title="Permalink to this equation">#</a></span>\[\begin{gather}
 e\cdot a = a\\
 a\cdot e = a\\
 a\cdot(b\cdot c) = (a\cdot b) \cdot c
 \end{gather}\]</div>
 <p>For example, numbers with <span class="math notranslate nohighlight">\(e=0\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span> as <span class="math notranslate nohighlight">\(+\)</span> are a monoid. Similarly, numbers with <span class="math notranslate nohighlight">\(1\)</span> and multiplication are a monoid or truthvalues with <em>False</em> and <em>Or</em> and truth values with <em>True</em> and <em>And</em>.</p>
-<p>These are also example of what is known as a commutative monoid. A <strong>commutative monoid</strong> <span class="math notranslate nohighlight">\((A,e,\cdot)\)</span> is a monoid that is commutative, that is, it satifies
-$<span class="math notranslate nohighlight">\(a\cdot b= b\cdot a\)</span>$</p>
+<p>These are also example of what is known as a commutative monoid. A <strong>commutative monoid</strong> <span class="math notranslate nohighlight">\((A,e,\cdot)\)</span> is a monoid that is commutative, that is, it satifies</p>
+<div class="math notranslate nohighlight">
+\[a\cdot b= b\cdot a\]</div>
 <p>for all <span class="math notranslate nohighlight">\(a,b\in A\)</span>.</p>
 <p>A monoid <span class="math notranslate nohighlight">\((A,e,\cdot)\)</span> is <strong>idempotent</strong> if</p>
 <div class="math notranslate nohighlight">
@@ -772,35 +773,40 @@ $<span class="math notranslate nohighlight">\(a\cdot b= b\cdot a\)</span>$</p>
 <h2>Order-Theoretic Definition of Semilattices<a class="headerlink" href="#order-theoretic-definition-of-semilattices" title="Permalink to this headline">#</a></h2>
 <section id="what-is-an-order">
 <h3>What is an order?<a class="headerlink" href="#what-is-an-order" title="Permalink to this headline">#</a></h3>
-<p>A <strong>pre-order</strong> <span class="math notranslate nohighlight">\((A,R)\)</span> consists of a set <span class="math notranslate nohighlight">\(A\)</span> together with a relation <a class="footnote-reference brackets" href="#times" id="id1">1</a>
-$<span class="math notranslate nohighlight">\(R\subseteq A\times A\)</span>$</p>
+<p>A <strong>pre-order</strong> <span class="math notranslate nohighlight">\((A,R)\)</span> consists of a set <span class="math notranslate nohighlight">\(A\)</span> together with a relation <a class="footnote-reference brackets" href="#times" id="id1">1</a></p>
+<div class="math notranslate nohighlight">
+\[R\subseteq A\times A\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-153e51e8-c92b-4d78-afcc-887a67989025">
-<span class="eqno">(2)<a class="headerlink" href="#equation-153e51e8-c92b-4d78-afcc-887a67989025" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-963517b3-ca49-450f-bd60-4f7691240761">
+<span class="eqno">(2)<a class="headerlink" href="#equation-963517b3-ca49-450f-bd60-4f7691240761" title="Permalink to this equation">#</a></span>\[\begin{gather}
 (a,a)\in R \\
 \textrm{ if } (a,b) \in R \textrm{ and } (b,c)\in R \ \textrm{ then } \ (a,c)\in R
 \end{gather}\]</div>
 <p>In words, <span class="math notranslate nohighlight">\(R\)</span> is <em>reflexive</em> (the first condition) and <span class="math notranslate nohighlight">\(R\)</span> is <em>transitive</em> (the second condition). Usually one writes <span class="math notranslate nohighlight">\(aRb\)</span> instead of <span class="math notranslate nohighlight">\((a,b)\in R\)</span> and also <span class="math notranslate nohighlight">\(\le\)</span> instead of <span class="math notranslate nohighlight">\(R\)</span>. Finally, one often uses “,” to mean “and” and <span class="math notranslate nohighlight">\(\Longrightarrow\)</span> to mean “if … then …”.</p>
 <p>With this notation the two conditions above become</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9e8c3d85-7d10-4f55-bc2f-4dbff3bdbb99">
-<span class="eqno">(3)<a class="headerlink" href="#equation-9e8c3d85-7d10-4f55-bc2f-4dbff3bdbb99" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-68bbcfb3-63f0-4c1b-a3ae-996ecd124a59">
+<span class="eqno">(3)<a class="headerlink" href="#equation-68bbcfb3-63f0-4c1b-a3ae-996ecd124a59" title="Permalink to this equation">#</a></span>\[\begin{gather}
 a\le a \\
 a\le b, b\le c \ \ \Longrightarrow \ \ a \le c
 \end{gather}\]</div>
-<p>A <strong>partial order</strong> <span class="math notranslate nohighlight">\((A,\le)\)</span> is a pre-order such that
-$<span class="math notranslate nohighlight">\(a\le b, b\le a \ \Longrightarrow \ a=b\)</span>$</p>
+<p>A <strong>partial order</strong> <span class="math notranslate nohighlight">\((A,\le)\)</span> is a pre-order such that</p>
+<div class="math notranslate nohighlight">
+\[a\le b, b\le a \ \Longrightarrow \ a=b\]</div>
 </section>
 <section id="semilattices">
 <h3>Semilattices<a class="headerlink" href="#semilattices" title="Permalink to this headline">#</a></h3>
-<p>In an order <span class="math notranslate nohighlight">\((A,\le)\)</span>, an element <span class="math notranslate nohighlight">\(c\in A\)</span> is an <strong>upper bound</strong> of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> if <span class="math notranslate nohighlight">\(a\le c\)</span> and <span class="math notranslate nohighlight">\(b\le c\)</span>. If for all <span class="math notranslate nohighlight">\(d\in A\)</span> we have
-$<span class="math notranslate nohighlight">\(a\le d,b\le d \ \Longrightarrow \ c\le d\)</span>$</p>
+<p>In an order <span class="math notranslate nohighlight">\((A,\le)\)</span>, an element <span class="math notranslate nohighlight">\(c\in A\)</span> is an <strong>upper bound</strong> of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> if <span class="math notranslate nohighlight">\(a\le c\)</span> and <span class="math notranslate nohighlight">\(b\le c\)</span>. If for all <span class="math notranslate nohighlight">\(d\in A\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[a\le d,b\le d \ \Longrightarrow \ c\le d\]</div>
 <p>then <span class="math notranslate nohighlight">\(c\)</span> is called a <strong>least</strong> upper bound.</p>
 <p><em>Exercise:</em> Define greatest lower bound.</p>
 <p><em>Notation:</em> The least upper bound of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is denoted by <span class="math notranslate nohighlight">\(a\vee b\)</span>.</p>
-<p><em>Remind:</em> Let us recall or-introduction
-$<span class="math notranslate nohighlight">\(\frac a {a\vee b} \quad\quad \frac b {a \vee b}\)</span>$</p>
-<p>and or-elimination
-$<span class="math notranslate nohighlight">\(\frac {a\vee b \quad \frac {a}{d} \quad \frac{b}{d}} d\)</span>$</p>
+<p><em>Reminder:</em> Let us recall or-introduction</p>
+<div class="math notranslate nohighlight">
+\[\frac a {a\vee b} \quad\quad \frac b {a \vee b}\]</div>
+<p>and or-elimination</p>
+<div class="math notranslate nohighlight">
+\[\frac {a\vee b \quad \frac {a}{d} \quad \frac{b}{d}} d\]</div>
 <p>A <strong>join-semilattice</strong> is a partial order in which any two elements have a least upper bound.</p>
 <p>A <strong>meet-semilattice</strong> is a partial order in which any two elements have a greatest lower bound.</p>
 </section>
