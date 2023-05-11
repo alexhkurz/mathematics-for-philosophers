@@ -397,27 +397,19 @@ document.write(`
 <h2>how to create this jupyter book<a class="headerlink" href="#how-to-create-this-jupyter-book" title="Permalink to this heading">#</a></h2>
 <section id="basics">
 <h3>basics<a class="headerlink" href="#basics" title="Permalink to this heading">#</a></h3>
-<p>After cloning this repo, and installing jupyter-book</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
-</pre></div>
-</div>
+<p>After cloning this repo, and installing jupyter-book run from the command line</p>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code></p>
 <p>The book can now be opened in a browser by opening the file <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code>. On a mac, simply run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">_build/html/index.html</span></code>.</p>
 </section>
 <section id="publishing">
 <h3>publishing<a class="headerlink" href="#publishing" title="Permalink to this heading">#</a></h3>
 <p>(There is sth missing here.) After installing <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> with
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghp-import</span></code> publish the book by running</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
-</pre></div>
-</div>
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghp-import</span></code> publish the book by running <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p>
 <p>This makes the <a class="reference external" href="https://alexhkurz.github.io/mathematics-for-philosophers">book available online</a>. It also keeps the source files in the <code class="docutils literal notranslate"><span class="pre">main</span></code>-branch separate from the files in <code class="docutils literal notranslate"><span class="pre">_build</span></code> in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
 </section>
 <section id="important-commands">
 <h3>important commands<a class="headerlink" href="#important-commands" title="Permalink to this heading">#</a></h3>
-<p>If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out <code class="docutils literal notranslate"><span class="pre">_build</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">clean</span> <span class="o">.</span>
-</pre></div>
-</div>
+<p>If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out <code class="docutils literal notranslate"><span class="pre">_build</span></code> by running <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">clean</span> <span class="pre">.</span></code></p>
 </section>
 <section id="references">
 <h3>references<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h3>
