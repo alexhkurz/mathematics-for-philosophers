@@ -8,7 +8,9 @@ Mathematically, it is simple and beautiful. It also proved to be surprisingly ro
 
 Moreover, the theorem can be interpreted in many different ways. For example, Diane Coyle in her book "Cogs and Monsters" says
 
-*Arrow’s theorem is really a formal statement of the obvious truth that there are unavoidable conflicts of interest or dilemmas in society.*
+*Arrow’s theorem is really a formal statement of the obvious truth that there are unavoidable conflicts of interest or dilemmas in society.* [^coyle]
+
+[^coyle]: The quote continues: *The ‘impossibility’ is the result of a clash between trying to make a value judgement in terms of a social welfare function while excluding the possibility of interpersonal welfare comparisons. In life, the scope for Pareto improvements is small indeed.*
 
 More traditional is to say that Arrow's theorem shows the impossibility of a fair voting procedure that aggregates the preferences of all voters.
 
