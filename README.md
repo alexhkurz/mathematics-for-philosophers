@@ -12,18 +12,16 @@ The notes are written together while discussing the topic. Unfortunately, the no
 
 ### basics
 
-After cloning this repo, and installing jupyter-book
+After cloning this repo, and installing jupyter-book run from the command line `jupyter-book build .` or `jb build .` The book can now be opened in a browser by opening the file `_build/html/index.html`. On a mac, simply run `open _build/html/index.html`. To summarize
 
 ```
-jupyter-book build .
+jb build . ; open _build/html/index.html
 ```
-
-The book can now be opened in a browser by opening the file `_build/html/index.html`. On a mac, simply run `open _build/html/index.html`.
 
 ### publishing
 
 (There is sth missing here.) After installing `ghp-import` with
-`pip install ghp-import` publish the book by running
+`pip install ghp-import` publish the book by running 
 
 ```
 ghp-import -n -p -f _build/html
@@ -33,11 +31,7 @@ This makes the [book available online](https://alexhkurz.github.io/mathematics-f
 
 ### important commands
 
-If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build`:
-
-```
-jupyter-book clean .
-```
+If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build` by running `jupyter-book clean .`
 
 ### references
 

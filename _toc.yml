@@ -18,6 +18,8 @@ parts:
   - file: contents/paradoxes.md
   - file: contents/numbers.md
   - file: contents/modal-logic.md
+  - file: contents/arrows-theorem.md
+  - file: contents/welfare-theorems.md
 - caption:  Possibly of Interest
   chapters:
   - file: contents/geometry.md
