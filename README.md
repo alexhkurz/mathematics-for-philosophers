@@ -12,7 +12,7 @@ The notes are written together while discussing the topic. Unfortunately, the no
 
 ### basics
 
-After cloning this repo, and installing jupyter-book run from the command line `jupyter-book build .` or `jb build .` The book can now be opened in a browser by opening the file `_build/html/index.html`. On a mac, simply run `open _build/html/index.html`. To summarize
+After cloning this repo, and installing jupyter-book run from the command line `jupyter-book build .` or `jb build .` The book can now be opened in a browser by opening the file `_build/html/index.html` with a file browser. On a mac, simply run `open _build/html/index.html`. To summarize
 
 ```
 jb build . ; open _build/html/index.html
@@ -27,7 +27,7 @@ jb build . ; open _build/html/index.html
 ghp-import -n -p -f _build/html
 ```
 
-This makes the [book available online](https://alexhkurz.github.io/mathematics-for-philosophers). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch.
+This makes the [book available online](https://alexhkurz.github.io/mathematics-for-philosophers). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch (Github knows that it should use the `gh-pages` branch to show the book as a webpage).
 
 ### important commands
 
