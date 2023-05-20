@@ -2,6 +2,8 @@
 
 (... preliminary notes, to be resumed ...)
 
+... comments on why this is our first project: 1) historically, in the 19th century, the problem of equivalence started to play a big role in the development of set-theory and logic, 2) it allows us to introduce fundamental concepts of set-theory and logic, 3) it can help with the analysis of many difficult concepts such as  abstraction, identity, money, consiousness, etc 4) it not only is an example of how mathematics can illuminate philosophy, but also an example of a topic in philosophy mathematics, 5) philosophy of mathematics is often paradigmatic for philosophy in general because if a problem is already difficult in philosophy of mathematics then it will be even more difficult in philosophy in general, 6) we will illustrate this issue with the problem of the "circle of explanations" ... tbc ...
+
 ## Introduction
 
 In his [*An Essay Concerning Humane Understanding*](https://www.gutenberg.org/cache/epub/10615/pg10615-images.html), Book 2, Chapter 12 *On Identity and Diversity*, Section 12 *Consciousness makes personal Identity*, Locke writes (my emphasis):

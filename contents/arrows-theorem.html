@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/arrows-theorem';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Welfare Theorems" href="welfare-theorems.html" />
-    <link rel="prev" title="Modal Logic" href="modal-logic.html" />
+    <link rel="next" title="Recursion" href="recursion.html" />
+    <link rel="prev" title="Numbers" href="numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -150,21 +150,22 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Under Construction</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Under Construction (Logic)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="equivalence-relations.html">Equivalence Relations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="set-theory.html">Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model-theory.html">Model Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modal-logic.html">Modal Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="algebraic-logic.html">Algebraic Logic</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Planned</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="set-theory.html">Set Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="information-theory.html">Information Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="paradoxes.html">Paradoxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numbers.html">Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modal-logic.html">Modal Logic</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Arrow’s Theorem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="welfare-theorems.html">The Welfare Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welfare-theorems.html">Pareto Criterion and Welfare Theorems</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Possibly of Interest</span></p>
 <ul class="nav bd-sidenav">
@@ -174,7 +175,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="infinity.html">Infinity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intuitionistic-logic.html">Intuitionistic Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="galois-theory.html">Galois Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="model-theory.html">Model Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="topology.html">Topology</a></li>
 </ul>
 
@@ -346,7 +346,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -362,6 +364,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-links">random links</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -380,11 +390,18 @@ document.write(`
 <p><em>Arrow’s theorem is really a formal statement of the obvious truth that there are unavoidable conflicts of interest or dilemmas in society.</em> <a class="footnote-reference brackets" href="#coyle" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>More traditional is to say that Arrow’s theorem shows the impossibility of a fair voting procedure that aggregates the preferences of all voters.</p>
 <p>… to be continued …</p>
+<section id="random-links">
+<h2>random links<a class="headerlink" href="#random-links" title="Permalink to this heading">#</a></h2>
+<p>https://onlinelibrary.wiley.com/doi/full/10.1111/ajps.12714 … https://www.cambridge.org/core/journals/american-political-science-review/article/abs/convicting-the-innocent-the-inferiority-of-unanimous-jury-verdicts-under-strategic-voting/2464A10255F23A692DFDC6B92E46E1A9 … https://www.jstor.org/stable/2118204 …      https://web.stanford.edu/~jacksonm/papersarticles.html#political … https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2007.00737.x …</p>
+<p><a class="reference external" href="https://www.econstor.eu/bitstream/10419/62670/1/571839150.pdf">Arrow’s impossibility theorem: Two simple single profile versions</a></p>
+<p>https://link.springer.com/content/pdf/10.1007/0-387-29368-X_14.pdf</p>
+<p>Quint, <a class="reference external" href="https://www.ssc.wisc.edu/~dquint/econ698/all%20lectures%20for%20proofs%20class.pdf">Some Beautiful Theorems with Beautiful Proofs</a></p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="coyle" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>The quote continues: <em>The ‘impossibility’ is the result of a clash between trying to make a value judgement in terms of a social welfare function while excluding the possibility of interpersonal welfare comparisons. In life, the scope for Pareto improvements is small indeed.</em></p>
 </aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -419,20 +436,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="modal-logic.html"
+       href="numbers.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Modal Logic</p>
+        <p class="prev-next-title">Numbers</p>
       </div>
     </a>
     <a class="right-next"
-       href="welfare-theorems.html"
+       href="recursion.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Welfare Theorems</p>
+        <p class="prev-next-title">Recursion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -445,6 +462,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-links">random links</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
