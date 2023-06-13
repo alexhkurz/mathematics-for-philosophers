@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algebraic Logic &#8212; Mathematics for Philosophers</title>
   
   
@@ -152,7 +151,14 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Under Construction (Logic)</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="prel-recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prel-propositional-logic.html">Propositional Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prel-set-theory.html">Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prel-model-theory.html">Model Theory</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Under Construction (Logic)</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="equivalence-relations.html">Equivalence Relations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set-theory.html">Set Theory</a></li>
@@ -392,15 +398,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="algebraic-logic">
+  <div class="tex2jax_ignore mathjax_ignore section" id="algebraic-logic">
 <h1>Algebraic Logic<a class="headerlink" href="#algebraic-logic" title="Permalink to this heading">#</a></h1>
 <p>…</p>
-<section id="universal-algebraic-definition-of-semilattice">
+<div class="section" id="universal-algebraic-definition-of-semilattice">
 <h2>Universal Algebraic Definition of Semilattice<a class="headerlink" href="#universal-algebraic-definition-of-semilattice" title="Permalink to this heading">#</a></h2>
 <p>In <em>universal algebra</em>, one studies sets <span class="math notranslate nohighlight">\(A\)</span> equipped with operations, which are subject to equations.</p>
 <p><strong>Definition:</strong> A <strong>monoid</strong> <span class="math notranslate nohighlight">\((A,e,\cdot)\)</span> has a constant <span class="math notranslate nohighlight">\(e\in A\)</span> and a binary operation <span class="math notranslate nohighlight">\(\cdot:A\times A\to A\)</span> satisfing the equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4d626c1a-0af3-42b7-bac2-17894c4756bc">
-<span class="eqno">(1)<a class="headerlink" href="#equation-4d626c1a-0af3-42b7-bac2-17894c4756bc" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-7fbcb9a0-2249-45eb-b700-394e331f9c29">
+<span class="eqno">(4)<a class="headerlink" href="#equation-7fbcb9a0-2249-45eb-b700-394e331f9c29" title="Permalink to this equation">#</a></span>\[\begin{gather}
 e\cdot a = a\\
 a\cdot e = a\\
 a\cdot(b\cdot c) = (a\cdot b) \cdot c
@@ -421,32 +427,32 @@ a\cdot(b\cdot c) = (a\cdot b) \cdot c
 <li><p>Sets with <span class="math notranslate nohighlight">\(\emptyset\)</span> and <span class="math notranslate nohighlight">\(\cup\)</span> are a semilattice.</p></li>
 </ul>
 <p>We arrived at the algebraic definition of a (bounded) semilattice, that is, a definition in terms of operations and equations.</p>
-</section>
-<section id="order-theoretic-definition-of-semilattices">
+</div>
+<div class="section" id="order-theoretic-definition-of-semilattices">
 <h2>Order-Theoretic Definition of Semilattices<a class="headerlink" href="#order-theoretic-definition-of-semilattices" title="Permalink to this heading">#</a></h2>
-<section id="what-is-an-order">
+<div class="section" id="what-is-an-order">
 <h3>What is an order?<a class="headerlink" href="#what-is-an-order" title="Permalink to this heading">#</a></h3>
-<p>A <strong>pre-order</strong> <span class="math notranslate nohighlight">\((A,R)\)</span> consists of a set <span class="math notranslate nohighlight">\(A\)</span> together with a relation <a class="footnote-reference brackets" href="#times" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>A <strong>pre-order</strong> <span class="math notranslate nohighlight">\((A,R)\)</span> consists of a set <span class="math notranslate nohighlight">\(A\)</span> together with a relation <a class="footnote-reference brackets" href="#times" id="id1">1</a></p>
 <div class="math notranslate nohighlight">
 \[R\subseteq A\times A\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7bf380d-dbe9-44cf-9cbd-2292ff2f2b45">
-<span class="eqno">(2)<a class="headerlink" href="#equation-d7bf380d-dbe9-44cf-9cbd-2292ff2f2b45" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-09aa9092-fb45-4143-a774-7f3030b271fb">
+<span class="eqno">(5)<a class="headerlink" href="#equation-09aa9092-fb45-4143-a774-7f3030b271fb" title="Permalink to this equation">#</a></span>\[\begin{gather}
 (a,a)\in R \\
 \textrm{ if } (a,b) \in R \textrm{ and } (b,c)\in R \ \textrm{ then } \ (a,c)\in R
 \end{gather}\]</div>
 <p>In words, <span class="math notranslate nohighlight">\(R\)</span> is <em>reflexive</em> (the first condition) and <span class="math notranslate nohighlight">\(R\)</span> is <em>transitive</em> (the second condition). Usually one writes <span class="math notranslate nohighlight">\(aRb\)</span> instead of <span class="math notranslate nohighlight">\((a,b)\in R\)</span> and also <span class="math notranslate nohighlight">\(\le\)</span> instead of <span class="math notranslate nohighlight">\(R\)</span>. Finally, one often uses “,” to mean “and” and <span class="math notranslate nohighlight">\(\Longrightarrow\)</span> to mean “if … then …”.</p>
 <p>With this notation the two conditions above become</p>
-<div class="amsmath math notranslate nohighlight" id="equation-58a00e25-d11e-4728-ab70-35d776284989">
-<span class="eqno">(3)<a class="headerlink" href="#equation-58a00e25-d11e-4728-ab70-35d776284989" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-5529b7d6-4f0b-4a3b-bbc6-415cac208bfb">
+<span class="eqno">(6)<a class="headerlink" href="#equation-5529b7d6-4f0b-4a3b-bbc6-415cac208bfb" title="Permalink to this equation">#</a></span>\[\begin{gather}
 a\le a \\
 a\le b, b\le c \ \ \Longrightarrow \ \ a \le c
 \end{gather}\]</div>
 <p>A <strong>partial order</strong> <span class="math notranslate nohighlight">\((A,\le)\)</span> is a pre-order such that</p>
 <div class="math notranslate nohighlight">
 \[a\le b, b\le a \ \Longrightarrow \ a=b\]</div>
-</section>
-<section id="semilattices">
+</div>
+<div class="section" id="semilattices">
 <h3>Semilattices<a class="headerlink" href="#semilattices" title="Permalink to this heading">#</a></h3>
 <p>In an order <span class="math notranslate nohighlight">\((A,\le)\)</span>, an element <span class="math notranslate nohighlight">\(c\in A\)</span> is an <strong>upper bound</strong> of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> if <span class="math notranslate nohighlight">\(a\le c\)</span> and <span class="math notranslate nohighlight">\(b\le c\)</span>. If for all <span class="math notranslate nohighlight">\(d\in A\)</span> we have</p>
 <div class="math notranslate nohighlight">
@@ -462,21 +468,21 @@ a\le b, b\le c \ \ \Longrightarrow \ \ a \le c
 \[\frac {a\vee b \quad \frac {a}{d} \quad \frac{b}{d}} d\]</div>
 <p>A <strong>join-semilattice</strong> is a partial order in which any two elements have a least upper bound.</p>
 <p>A <strong>meet-semilattice</strong> is a partial order in which any two elements have a greatest lower bound.</p>
-</section>
-</section>
-<section id="equivalence-of-algebraic-and-order-theoretic-definitions">
+</div>
+</div>
+<div class="section" id="equivalence-of-algebraic-and-order-theoretic-definitions">
 <h2>Equivalence of Algebraic and Order-Theoretic Definitions<a class="headerlink" href="#equivalence-of-algebraic-and-order-theoretic-definitions" title="Permalink to this heading">#</a></h2>
 <p>…</p>
 <p>todo</p>
 <p>…</p>
-</section>
-<section id="order-in-algebraic-logic">
+</div>
+<div class="section" id="order-in-algebraic-logic">
 <h2>Order in Algebraic Logic<a class="headerlink" href="#order-in-algebraic-logic" title="Permalink to this heading">#</a></h2>
 <p>In algebraic logic, the “logical order” <span class="math notranslate nohighlight">\(a\le b\)</span> is read as “if <span class="math notranslate nohighlight">\(a\)</span> then <span class="math notranslate nohighlight">\(b\)</span>”.</p>
 <p>We all expect “if <span class="math notranslate nohighlight">\(a\)</span> then <span class="math notranslate nohighlight">\(a\vee b\)</span>”.</p>
 <p>Thus, <span class="math notranslate nohighlight">\(a\le a\vee b\)</span>.</p>
-</section>
-<section id="weak-kleene-logic-according-to-jose">
+</div>
+<div class="section" id="weak-kleene-logic-according-to-jose">
 <h2>Weak Kleene Logic according to Jose<a class="headerlink" href="#weak-kleene-logic-according-to-jose" title="Permalink to this heading">#</a></h2>
 <p>I claim that in WK logic, we have <span class="math notranslate nohighlight">\(a\le\star\)</span> for all <span class="math notranslate nohighlight">\(a\)</span>, if <span class="math notranslate nohighlight">\(\le\)</span> is the logical order induced by <span class="math notranslate nohighlight">\(\vee\)</span>.</p>
 <p>We have</p>
@@ -487,17 +493,18 @@ a\le b, b\le c \ \ \Longrightarrow \ \ a \le c
 <p>Therefore</p>
 <div class="math notranslate nohighlight">
 \[ a \le \star\]</div>
-</section>
-<section id="references">
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>https://en.wikipedia.org/wiki/Semilattice</p>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="times" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p><span class="math notranslate nohighlight">\(A\times B = \{(a,b) \mid a\in A, b\in B\}\)</span>. And <span class="math notranslate nohighlight">\(X\subseteq Y\)</span> means that <span class="math notranslate nohighlight">\(x\in X\Rightarrow x\in Y\)</span>.</p>
-</aside>
-</section>
-</section>
+<dl class="footnote brackets">
+<dt class="label" id="times"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><span class="math notranslate nohighlight">\(A\times B = \{(a,b) \mid a\in A, b\in B\}\)</span>. And <span class="math notranslate nohighlight">\(X\subseteq Y\)</span> means that <span class="math notranslate nohighlight">\(x\in X\Rightarrow x\in Y\)</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

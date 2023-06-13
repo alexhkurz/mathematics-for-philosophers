@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Numbers &#8212; Mathematics for Philosophers</title>
+    <title>Propositional Logic &#8212; Mathematics for Philosophers</title>
   
   
   
@@ -60,11 +60,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/numbers';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/prel-propositional-logic';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Arrow’s Theorem" href="arrows-theorem.html" />
-    <link rel="prev" title="Paradoxes" href="paradoxes.html" />
+    <link rel="next" title="Set Theory" href="prel-set-theory.html" />
+    <link rel="prev" title="Recursion" href="prel-recursion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -150,9 +152,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="prel-introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prel-recursion.html">Recursion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="prel-propositional-logic.html">Propositional Logic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Propositional Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prel-set-theory.html">Set Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prel-model-theory.html">Model Theory</a></li>
 </ul>
@@ -165,10 +168,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="algebraic-logic.html">Algebraic Logic</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Planned</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="information-theory.html">Information Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="paradoxes.html">Paradoxes</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arrows-theorem.html">Arrow’s Theorem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="welfare-theorems.html">Pareto Criterion and Welfare Theorems</a></li>
@@ -253,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexhkurz/mathematics-for-philosophers/issues/new?title=Issue%20on%20page%20%2Fcontents/numbers.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/mathematics-for-philosophers/issues/new?title=Issue%20on%20page%20%2Fcontents/prel-propositional-logic.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/contents/numbers.md" target="_blank"
+      <li><a href="../_sources/contents/prel-propositional-logic.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Numbers</h1>
+    <h1>Propositional Logic</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,18 +378,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dedekind-s-was-sind-und-was-sollen-die-zahlen">Dedekind’s Was sind und was sollen die Zahlen?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-quotes">Some Quotes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vorwort">Vorwort</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#erste-auflage-1887">Erste Auflage (1887)</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#zweite-auflage-1893">Zweite Auflage (1893)</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#dritte-auflage-1911">Dritte Auflage (1911)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revision">Revision</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-of-propositional-logic">Syntax of Propositional Logic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operational-semantics-truth-tables">Operational Semantics: Truth Tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#denotational-semantics-venn-diagrams">Denotational Semantics: Venn Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-method-of-indirect-truth-tables">Appendix: The Method of Indirect Truth Tables</a></li>
 </ul>
             </nav>
         </div>
@@ -398,34 +394,114 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="numbers">
-<h1>Numbers<a class="headerlink" href="#numbers" title="Permalink to this heading">#</a></h1>
-<p>(…some preliminary notes…)</p>
+  <p><span class="math notranslate nohighlight">\(\newcommand{\sem}[1]{[\![#1]\!]}\)</span></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="propositional-logic">
+<h1>Propositional Logic<a class="headerlink" href="#propositional-logic" title="Permalink to this heading">#</a></h1>
+<p>These notes assume some knowledge of propositional logic, truth tables and indirect truth tables as covered in many symbolic logic courses given in philosophy departments. <a class="footnote-reference brackets" href="#semantictableaux" id="id1">1</a></p>
+<p>… summary of what is in here</p>
+<p>The distinction between operational and denotational semantics comes from programming languages and is not usually applied to propositional logic. But introducing it here is an opportunity to explain ideas that may be important later on. For the purposes of this section, operational semantics refers to the semantics via truth tables while denotational semantics refers to the semantics via Venn diagrams (the set-theoretic semantics).</p>
+<p>… Claim: the distinction syntax and semantics cannot itself be formalized (discuss whether this is another example of a circle of explanations) …</p>
+<p>… Brouwer invented intuitionism to make clear that we cannot break the circle of explanations, but then his followers (from Heyting to Voevodsky) formalized intuitionistic logic and it is now at the heart of the most heroic attempts (Coq, Agda, Lean, HoTT, etc) to break the circle of explanations … could be interesting to explore this in more depth …</p>
+<div class="section" id="revision">
+<h2>Revision<a class="headerlink" href="#revision" title="Permalink to this heading">#</a></h2>
+<p>Show that the following formulas are valid (tautologies).</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a20d210d-4a67-4bad-a85c-ec5379f5fd0a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a20d210d-4a67-4bad-a85c-ec5379f5fd0a" title="Permalink to this equation">#</a></span>\[\begin{gather}
+P \vee \neg P\\
+(P \to Q) \to (\neg Q\to \neg P)\\
+P \to (Q \to P)\\
+(P\to Q)\vee (Q\to P)\\
+((P\to Q)\to P)\to P\\
+(P\vee Q)\wedge (\neg P\vee R)\to Q\vee R\\
+\end{gather}\]</div>
+<p>Show that the following formulas are not valid. Find counter-examples and express them in natural language.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-688c620e-3025-4429-9835-d0a458848dcf">
+<span class="eqno">(2)<a class="headerlink" href="#equation-688c620e-3025-4429-9835-d0a458848dcf" title="Permalink to this equation">#</a></span>\[\begin{gather}
+(P\vee Q)\to (P\wedge Q)\\
+(P\to Q)\to (\neg P\to \neg Q)\\
+\end{gather}\]</div>
+</div>
+<div class="section" id="syntax-of-propositional-logic">
+<h2>Syntax of Propositional Logic<a class="headerlink" href="#syntax-of-propositional-logic" title="Permalink to this heading">#</a></h2>
+<p>We now recap propositional logic, giving a more formal account.</p>
+<p>Roughly speaking, the word “syntax” refers to everything that can be done just moving around symbols without understanding the meaning behind a formal system.</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbb P\)</span> be a set, the elements of which are called <em>propositional variables</em> or <em>atomic propositions</em>. Elements of <span class="math notranslate nohighlight">\(\mathbb P\)</span> are commonly written as <span class="math notranslate nohighlight">\(P,Q,\ldots\)</span>.</p>
+<p>Formulas of propositional logic are defined as follows. A <strong>formula</strong> is either</p>
+<ul class="simple">
+<li><p>a propositional variable <span class="math notranslate nohighlight">\(P\in\mathbb P\)</span></p></li>
+<li><p>a conjunction <span class="math notranslate nohighlight">\(\phi\wedge\psi\)</span>,</p></li>
+<li><p>a disjunction <span class="math notranslate nohighlight">\(\phi\vee\psi\)</span>,</p></li>
+<li><p>a negation <span class="math notranslate nohighlight">\(\neg\phi\)</span></p></li>
+</ul>
+<p>where <span class="math notranslate nohighlight">\(\phi,\psi\)</span> refer recursively to formulas of propositional logic.</p>
+<p>We also use the following <strong>abbreviations</strong>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-eac576cb-11be-4c58-838b-865a2ba58a11">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eac576cb-11be-4c58-838b-865a2ba58a11" title="Permalink to this equation">#</a></span>\[\begin{align}
+P\to Q &amp;= \neg P \vee Q\\
+P\leftrightarrow Q &amp; = (P\to Q)\wedge (Q\to P)
+\end{align}\]</div>
+<p>We use rules for dropping parentheses.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\wedge,\vee\)</span> are associative.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\neg\)</span> has higher precedence than <span class="math notranslate nohighlight">\(\wedge,\vee\)</span>, which have higher precedence than <span class="math notranslate nohighlight">\(\to\)</span> and <span class="math notranslate nohighlight">\(\leftrightarrow\)</span>.</p></li>
+</ul>
+<p>If you are not familiar with this terminology it should become clear by looking at the following example.</p>
+<p>Instead of
+$<span class="math notranslate nohighlight">\((((\neg P)\wedge (\neg Q))\wedge (\neg R))\to ((\neg P)\wedge (\neg Q))\)</span>$</p>
+<p>we write</p>
+<div class="math notranslate nohighlight">
+\[\neg P \wedge \neg Q \wedge \neg R \ \to \ \neg P\wedge \neg Q\]</div>
+</div>
+<div class="section" id="operational-semantics-truth-tables">
+<h2>Operational Semantics: Truth Tables<a class="headerlink" href="#operational-semantics-truth-tables" title="Permalink to this heading">#</a></h2>
+<p>The meaning of the connectives <span class="math notranslate nohighlight">\(\wedge,\vee,\neg\)</span> is given by truth tables, which I assume to be well-known.</p>
+<p><strong>Definition:</strong> An <strong>interpretation</strong> (or <strong>valuation</strong>) is an assignment of truth values to propositional variables, that is, a function <span class="math notranslate nohighlight">\(v:\mathbb P\to \{0,1\}\)</span>.</p>
+<p><strong>Notation:</strong> We write <span class="math notranslate nohighlight">\(\sem{\phi}_v\)</span> for the truth value of <span class="math notranslate nohighlight">\(\phi\)</span> under the interpretation <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<p>Note each row of a truth table corresponds to an interpretation.</p>
+<p><strong>Definition:</strong> A formula <span class="math notranslate nohighlight">\(\phi\)</span> is</p>
+<ul class="simple">
+<li><p><strong>satisfiable</strong> if there is an interpretation <span class="math notranslate nohighlight">\(v\)</span> such that <span class="math notranslate nohighlight">\(\sem{\phi}_v=1\)</span>;</p></li>
+<li><p><strong>valid</strong> (=a tautology) if <span class="math notranslate nohighlight">\(\sem{\phi}_v=1\)</span> for all interpretations <span class="math notranslate nohighlight">\(v\)</span>.</p></li>
+</ul>
+<p>In other words, a formula is satisfiable if its truth table has a row that evaluates to 1 (true); a formula <span class="math notranslate nohighlight">\(\phi\)</span> is valid if all rows of its truth table evaluate to 1.</p>
+<p>The next result is important. It follows directly from the definitions and the fact that Boolean logic is two-valued (that is, its only truth values are 0 and 1).</p>
+<p><strong>Proposition:</strong> A formula is valid if an only if its negation is not satisfiable.</p>
+<p><em>Proof:</em> Sketch out the truth table for the formula and its negation.</p>
+</div>
+<div class="section" id="denotational-semantics-venn-diagrams">
+<h2>Denotational Semantics: Venn Diagrams<a class="headerlink" href="#denotational-semantics-venn-diagrams" title="Permalink to this heading">#</a></h2>
 <p>…</p>
-<div class="section" id="dedekind-s-was-sind-und-was-sollen-die-zahlen">
-<h2>Dedekind’s Was sind und was sollen die Zahlen?<a class="headerlink" href="#dedekind-s-was-sind-und-was-sollen-die-zahlen" title="Permalink to this heading">#</a></h2>
-<p>In this session we discussed Dedekind’s <a class="reference external" href="http://www.opera-platonis.de/dedekind/Dedekind_Was_sind_2.pdf">Was sind und was sollen die Zahlen?</a> Dedekind was the first to use the technique of definition by equivalence class to build up the various number systems in a systematic way.</p>
-<div class="section" id="some-quotes">
-<h3>Some Quotes<a class="headerlink" href="#some-quotes" title="Permalink to this heading">#</a></h3>
-<div class="section" id="vorwort">
-<h4>Vorwort<a class="headerlink" href="#vorwort" title="Permalink to this heading">#</a></h4>
-<p>Interesting to see how he reflects on the Grundlagenkrise that happened between the second and third edition.</p>
-<div class="section" id="erste-auflage-1887">
-<h5>Erste Auflage (1887)<a class="headerlink" href="#erste-auflage-1887" title="Permalink to this heading">#</a></h5>
-<p>Was beweisbar ist, soll in der Wissenschaft nicht ohne Beweis geglaubt werden</p>
-<p>Indem ich die Arithmetik (Algebra, Analysis) nur einen Teil der Logik nenne, spreche ich schon aus, daß ich den Zahlbegriff für gänzlich unabhängig von den Vorstellungen oder Anschauungen des Raumes und der Zeit, daß ich ihn vielmehr für einen unmittelbaren Ausfluß der reinen Denkgesetze halte. Meine Hauptantwort auf die im Titel dieser Schrift gestellte Frage lautet: die Zahlen sind freie Schöpfungen des menschlichen Geistes, sie dienen als ein Mittel, um die Verschiedenheit der Dinge leichter und schärfer aufzufassen. Durch den rein logischen Aufbau der Zahlen-Wissenschaft und durch das in ihr gewonnene stetige Zahlen-Reich sind wir erst in den Stand gesetzt, unsere Vorstellungen von Raum und Zeit genau zu untersuchen, indem wir dieselben auf dieses in unserem Geiste geschaffene Zahlen-Reich beziehen. Verfolgt man genau, was wir bei dem Zählen der Menge oder Anzahl von Dingen tun, so wird man auf die Betrachtung der Fähigkeit des Geistes geführt, Dinge auf Dinge zu beziehen, einem Dinge ein Ding entsprechen zu lassen, oder ein Ding durch ein Ding abzubilden, ohne welche Fähigkeit überhaupt kein Denken möglich ist. Auf dieser einzigen, auch sonst ganz unentbehrlichen Grundlage muß nach meiner Ansicht, wie ich auch schon bei einer Ankündigung der vorliegenden Schrift ausgesprochen habe, die gesamte Wissenschaft der Zahlen errichtet werden.</p>
 </div>
-<div class="section" id="zweite-auflage-1893">
-<h5>Zweite Auflage (1893)<a class="headerlink" href="#zweite-auflage-1893" title="Permalink to this heading">#</a></h5>
-<p>Die vorliegende Schrift hat bald nach ihrem Erscheinen neben günstigen auch ungünstige
-Beurteilungen gefunden, ja es sind ihr arge Fehler vorgeworfen. Ich habe mich von der Richtigkeit dieser Vorwürfe nicht überzeugen können und lasse jetzt die seit Kurzem vergriffene Schrift, zu deren öffentlicher Verteidigung es mir an Zeit fehlt, ohne jede Änderung wieder abdrucken, indem ich nur folgende Bemerkungen dem ersten Vorworte hinzufüge.</p>
-</div>
-<div class="section" id="dritte-auflage-1911">
-<h5>Dritte Auflage (1911)<a class="headerlink" href="#dritte-auflage-1911" title="Permalink to this heading">#</a></h5>
-<p>Als ich vor etwa acht Jahren aufgefordert wurde, die damals schon vergriffene zweite Auflage dieser Schrift durch eine dritte zu ersetzen, trug ich Bedenken, darauf einzugehen, weil inzwischen sich Zweifel an der Sicherheit wichtiger Grundlagen meiner Auffassung geltend gemacht hatten. Die Bedeutung und teilweise Berechtigung dieser Zweifel verkenne ich auch heute nicht, Aber mein Vertrauen in die innere Harmonie unserer Logik ist dadurch nicht erschüttert; ich glaube, daß eine strenge Untersuchung der Schöpferkraft des Geistes, aus bestimmten Elementen ein neues Bestimmtes, ihr System zu erschaffen, das notwendig von jedem dieser Elemente verschieden ist, gewiß dazu führen wird, die Grundlagen meiner Schrift einwandfrei zu gestalten. Durch andere Arbeiten bin ich jedoch verhindert, eine so schwierige Untersuchung zu Ende zu führen, und ich bitte daher um Nachsicht, wenn die Schrift jetzt doch in ungeänderter Form zum dritten Male erscheint, was sich nur dadurch rechtfertigen läßt, daß das Interesse an ihr, wie die anhaltende Nachfrage zeigt, noch nicht erloschen ist.</p>
-</div>
-</div>
-</div>
+<div class="section" id="appendix-the-method-of-indirect-truth-tables">
+<h2>Appendix: The Method of Indirect Truth Tables<a class="headerlink" href="#appendix-the-method-of-indirect-truth-tables" title="Permalink to this heading">#</a></h2>
+<p>Read the following together with the notes you took in class. The example we did in class was <span class="math notranslate nohighlight">\(P\wedge Q\to P\vee Q\)</span>.</p>
+<p><em>Input:</em> A formula.</p>
+<p><em>Output:</em> “Yes”, if the formula is valid. “No” and a counterexample, if the formula is not valid.</p>
+<p>The algorithm proceeds as follows.</p>
+<ul class="simple">
+<li><p>Write the formula as its syntax tree.</p></li>
+<li><p>Label the root as 0. <a class="footnote-reference brackets" href="#root" id="id2">2</a></p></li>
+<li><p>Use the truth table of the connective at the root to draw conclusions about the truth values of the children.</p></li>
+<li><p>Proceed recursively through the syntax tree.</p></li>
+<li><p>If you need to make a guess to proceed, make a copy of the syntax tree so that you can backtrack and investigate other possible choices later.</p></li>
+<li><p>If your current choice does not lead to a contradiction, this choice exhibits a counterexample to <span class="math notranslate nohighlight">\(\phi\)</span>. Output “No” and the counterexample. <a class="footnote-reference brackets" href="#counterexample" id="id3">3</a></p></li>
+<li><p>If your currenct choice leads to a contradiction backtrack. If all choices lead to a contradiction <span class="math notranslate nohighlight">\(\phi\)</span> is valid. Output “Yes”. <a class="footnote-reference brackets" href="#valid" id="id4">4</a></p></li>
+</ul>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="semantictableaux"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>In logic and computer science this method is known as <em>propositional tableaux</em> or <em>semantic tableaux</em>. The main difference is that indirect turth tables are more instructive to do pen-and-paper, while propositional tableaux are easier to make precise as an algorithm that can be implemented on a computer. But the basic idea is the same, namely to try to avoid to explicitly write out all rows of a truth table (which grows exponentially in the number of propositional variables).</p>
+</dd>
+<dt class="label" id="root"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>I formulate the algorithm as an algorithm for refutability, searching for an interpretation <span class="math notranslate nohighlight">\(v\)</span> under which <span class="math notranslate nohighlight">\(\phi\)</span> evaluates to 0, that is, <span class="math notranslate nohighlight">\(\sem{\phi}_v=0\)</span>. The same method, when starting with the label 1 at the root can be used to as an algorithm for satisfiablity, searching for an interpretation <span class="math notranslate nohighlight">\(v\)</span> under which <span class="math notranslate nohighlight">\(\phi\)</span> evaluates to <span class="math notranslate nohighlight">\(1\)</span>, that is <span class="math notranslate nohighlight">\(\sem{\phi}_v=1\)</span>. Note that the algorithm for refutability on input <span class="math notranslate nohighlight">\(\phi\)</span> performs the same steps as the algorithm for satisfiability on input <span class="math notranslate nohighlight">\(\neg\phi\)</span>. It follows that refutability and satisfiability are equivalent problems. For the purposes of this lecture, I find the algorithm for refutability more intuitive, but in the literature it is satisfiability which plays the dominant role.</p>
+</dd>
+<dt class="label" id="counterexample"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>If there is a choice that does not  lead to a contradiction, we know that the equation <span class="math notranslate nohighlight">\(\phi=0\)</span> has a solution, that is, that there is an interpretation such that <span class="math notranslate nohighlight">\(\neg\phi = 1\)</span>. This interpretation is a counterexample to <span class="math notranslate nohighlight">\(\phi\)</span> being valid.</p>
+</dd>
+<dt class="label" id="valid"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>If all choices lead to a contradiction, we know that the equation <span class="math notranslate nohighlight">\(\phi=0\)</span> has no solution, that is, that <span class="math notranslate nohighlight">\(\neg\phi\)</span> is not satisfiable, that is, that <span class="math notranslate nohighlight">\(\phi\)</span> is valid.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -461,20 +537,20 @@ Beurteilungen gefunden, ja es sind ihr arge Fehler vorgeworfen. Ich habe mich vo
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="paradoxes.html"
+       href="prel-recursion.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Paradoxes</p>
+        <p class="prev-next-title">Recursion</p>
       </div>
     </a>
     <a class="right-next"
-       href="arrows-theorem.html"
+       href="prel-set-theory.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Arrow’s Theorem</p>
+        <p class="prev-next-title">Set Theory</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -496,18 +572,11 @@ Beurteilungen gefunden, ja es sind ihr arge Fehler vorgeworfen. Ich habe mich vo
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dedekind-s-was-sind-und-was-sollen-die-zahlen">Dedekind’s Was sind und was sollen die Zahlen?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-quotes">Some Quotes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vorwort">Vorwort</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#erste-auflage-1887">Erste Auflage (1887)</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#zweite-auflage-1893">Zweite Auflage (1893)</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#dritte-auflage-1911">Dritte Auflage (1911)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revision">Revision</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-of-propositional-logic">Syntax of Propositional Logic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operational-semantics-truth-tables">Operational Semantics: Truth Tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#denotational-semantics-venn-diagrams">Denotational Semantics: Venn Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-method-of-indirect-truth-tables">Appendix: The Method of Indirect Truth Tables</a></li>
 </ul>
   </nav></div>
 

@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Equivalence Relations &#8212; Mathematics for Philosophers</title>
   
   
@@ -67,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Set Theory" href="set-theory.html" />
-    <link rel="prev" title="Introduction" href="../intro.html" />
+    <link rel="prev" title="Model Theory" href="prel-model-theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,7 +151,14 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Under Construction (Logic)</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="prel-recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prel-propositional-logic.html">Propositional Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prel-set-theory.html">Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prel-model-theory.html">Model Theory</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Under Construction (Logic)</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Equivalence Relations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set-theory.html">Set Theory</a></li>
@@ -395,19 +401,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="equivalence-relations">
+  <div class="tex2jax_ignore mathjax_ignore section" id="equivalence-relations">
 <h1>Equivalence Relations<a class="headerlink" href="#equivalence-relations" title="Permalink to this heading">#</a></h1>
 <p>(… preliminary notes, to be resumed …)</p>
-<p><em>resuming, we got caught in another circle of explanations … relying on naive set theory to explain equivalence relations didnt turn out to be feasible … so we started notes on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/H1YPqYSU2">Set Theory</a> … I tried to present set theory as a theory of predicate logic but then run into the problem of having to refer to what this theory means … which in turn led to <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rJR3J5rUn">Model Theory</a> … to do that I first wanted to review syntax and semantics of <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ByaOUajy2">Propositional Logic</a> … for which, in turn, I needed to explain the concept of <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SydVN5r83">Recursion</a> … which led me back to set theory … I am curious how this will continue …</em></p>
+<p><em>resuming, we got caught in another circle of explanations … relying on naive set theory to explain equivalence relations didnt turn out to be feasible … so we started notes on <a class="reference internal" href="prel-set-theory.html"><span class="doc std std-doc">Set Theory</span></a> … I tried to present set theory as a theory of predicate logic but then run into the problem of having to refer to what this theory means … which in turn led to <a class="reference internal" href="prel-model-theory.html"><span class="doc std std-doc">Model Theory</span></a> … to do that I first wanted to review syntax and semantics of <a class="reference internal" href="prel-propositional-logic.html"><span class="doc std std-doc">Propositional Logic</span></a> … for which, in turn, I needed to explain the concept of <a class="reference internal" href="prel-recursion.html"><span class="doc std std-doc">Recursion</span></a> … which led me back to set theory … I am curious how this will continue …</em></p>
 <p>… comments on why this is our first project: 1) historically, in the 19th century, the problem of equivalence started to play a big role in the development of set-theory and logic, 2) it allows us to introduce fundamental concepts of set-theory and logic, 3) it can help with the analysis of many difficult concepts such as  abstraction, identity, money, consiousness, etc 4) it not only is an example of how mathematics can illuminate philosophy, but also an example of a topic in philosophy mathematics, 5) philosophy of mathematics is often paradigmatic for philosophy in general because if a problem is already difficult in philosophy of mathematics then it will be even more difficult in philosophy in general, 6) we will illustrate this issue with the problem of the “circle of explanations” … tbc …</p>
-<section id="introduction">
+<div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In his <a class="reference external" href="https://www.gutenberg.org/cache/epub/10615/pg10615-images.html"><em>An Essay Concerning Humane Understanding</em></a>, Book 2, Chapter 12 <em>On Identity and Diversity</em>, Section 12 <em>Consciousness makes personal Identity</em>, Locke writes (my emphasis):</p>
 <blockquote>
 <div><p><em>in all these cases, our consciousness being interrupted, and we losing the sight of our past selves, doubts are raised whether we are the <strong>same thinking thing</strong>, i.e. the same SUBSTANCE or no. Which, however reasonable or unreasonable, concerns not <strong>PERSONAL identity</strong> at all. The question being what makes the <strong>same person</strong>; and not whether it be the <strong>same identical substance</strong>, which always thinks in the same person, which, in this case, matters not at all: <strong>different</strong> substances, by the <strong>same consciousness</strong> (where they do partake in it) being <strong>united into one person</strong>, as well as <strong>different bodies</strong> by the <strong>same life</strong> are <strong>united into one animal</strong>, whose identity is <strong>preserved in that change</strong> of substances by the <strong>unity of one</strong> continued life</em></p>
 </div></blockquote>
 <p>A few observations: 1) The text is difficult. 2) It is not clear whether the adjectives “same”, “different”, “united into” have a fixed meaning or change their meaning dependent on the nouns “substance”, “person”, “consciousness”, “bodies”, “animal” and “life”. 3) As it often happens in philosophy, the author tries to illuminate one difficult notion (identity) by bringing in other unexplained notions (no less difficult) such as consciousness, person, preservation in change, life, unity.</p>
-<p>I want to emphasize the last item. As it is often the case, in every day reasoning or in philosophy or even in the sciences, it is all to easy to run into a <strong>circle of explanations</strong>. <a class="footnote-reference brackets" href="#circleexplanations" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> To explain how mathematicians are able to break the circle of explanations is one of the main aims of these notes. <a class="footnote-reference brackets" href="#circleexplanations2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>I want to emphasize the last item. As it is often the case, in every day reasoning or in philosophy or even in the sciences, it is all to easy to run into a <strong>circle of explanations</strong>. <a class="footnote-reference brackets" href="#circleexplanations" id="id1">1</a> To explain how mathematicians are able to break the circle of explanations is one of the main aims of these notes. <a class="footnote-reference brackets" href="#circleexplanations2" id="id2">2</a></p>
 <p>At this point, I wanted to understand better what philosophers have to say about identity in general and continued with the <a class="reference external" href="https://plato.stanford.edu/entries/identity/#LogiIden">SEP on the Logic of Identity</a> (my emphasis):</p>
 <blockquote>
 <div><p><em>Numerical identity can be characterised, as just done, as the <strong>relation</strong> everything has to itself and to nothing else. But this is circular, since “nothing else” just means “no numerically non-identical thing”. It can be defined, equally circularly (because <strong>quantifying</strong> over all <strong>equivalence relations</strong> including itself), as the <strong>smallest equivalence relation</strong> (an equivalence relation being one which is <strong>reflexive, symmetric and transitive,</strong> for example, having the same shape). Other circular definitions are available. Usually it is defined as the equivalence relation (or: the reflexive relation) satisfying Leibniz’s Law, the principle of the indiscernibility of identicals, that if x is identical with y then everything true of x is true of y. Intuitively this is right, but only picks out identity uniquely if “what is true of x” is understood to include “being identical with x”; otherwise it is <strong>too weak</strong>. Circularity is thus not avoided. Nevertheless, Leibniz’s Law appears to be crucial to our understanding of identity, and, more particularly, to our understanding of distinctness: we exhibit our commitment to it whenever we infer from “Fa” and “Not-Fb” that a is not identical with b. Strictly, what is being employed in such inferences is the <strong>contrapositive</strong> of Leibniz’s Law (if something true of a is false of b, a is not identical with b), which some (in the context of the discussion of vague identity) have questioned, but it appears as indispensable to our grip on the concept of identity as Leibniz’s Law itself.</em></p>
@@ -415,21 +421,21 @@ document.write(`
 <p>At this point, one may ask whether, again, one notion is “explained” by introducing other unexplained notions. But this time the situation is different. First-order logic and set theory can be used to provide rigorous mathematical definitions.</p>
 <p>This is what we outline in the following.</p>
 <p>The claim of this note is that understanding mathematics is essential to understanding what philosophers write about identity. Whether it helps to solve the philsophical problems is another matter.</p>
-</section>
-<section id="first-order-logic">
+</div>
+<div class="section" id="first-order-logic">
 <h2>First-Order Logic<a class="headerlink" href="#first-order-logic" title="Permalink to this heading">#</a></h2>
 <p>Before coming to set theory, I give a quick review of first-order logic. This is not meant to be self-contained, rather I would like to assume that the reader has taken the equivalent of an undergraduate course on symbolic logic (in which case I recommend to skip this section).</p>
 <p>In fact, instead of writing out new notes, I link to my notes on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SkIp4pL3w">Discrete Mathematics (Logic and Relations)</a> I use in an undergraduate course <em>Programming Languages</em>.</p>
-</section>
-<section id="naive-set-theory">
+</div>
+<div class="section" id="naive-set-theory">
 <h2>Naive Set Theory<a class="headerlink" href="#naive-set-theory" title="Permalink to this heading">#</a></h2>
-<p>My initial understanding was that naive set theory suffices to clarify the philosophical discussion of the SEP entry and there will be no need to dive into formal set theory which we will briefly discuss in an appendix. <a class="footnote-reference brackets" href="#naivesetheory" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> But while giving the course, it became clear that much of the philosophical interest in first-order logic and set theory depends on whether the formal development of mathematics can successfully break the circle of explanations. So I ended up trying to balance the rope between naive set theory and formal set theory as follows. I used the notation of formal set theory; I use it in an informal way, but I tried to explain how it can be formalised if one is willing to put in the (admittedly large) effort; I often referred informally to software tools for which proofs are programs and which can verify mathematical proofs.</p>
-<section id="first-order-logic-and-set-theory">
+<p>My initial understanding was that naive set theory suffices to clarify the philosophical discussion of the SEP entry and there will be no need to dive into formal set theory which we will briefly discuss in an appendix. <a class="footnote-reference brackets" href="#naivesetheory" id="id3">3</a> But while giving the course, it became clear that much of the philosophical interest in first-order logic and set theory depends on whether the formal development of mathematics can successfully break the circle of explanations. So I ended up trying to balance the rope between naive set theory and formal set theory as follows. I used the notation of formal set theory; I use it in an informal way, but I tried to explain how it can be formalised if one is willing to put in the (admittedly large) effort; I often referred informally to software tools for which proofs are programs and which can verify mathematical proofs.</p>
+<div class="section" id="first-order-logic-and-set-theory">
 <h3>1) First-Order Logic and Set Theory<a class="headerlink" href="#first-order-logic-and-set-theory" title="Permalink to this heading">#</a></h3>
-<p>Quick review of logic. Very rough sketch of how to build up mathematics from logic and set theory. <a class="footnote-reference brackets" href="#first" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> The difference between <span class="math notranslate nohighlight">\(\subseteq\)</span> and <span class="math notranslate nohighlight">\(\in\)</span>. That sets can be elements of sets. How to define numbers in set theory. The axiom defining the empty set <span class="math notranslate nohighlight">\(\emptyset\)</span>.</p>
+<p>Quick review of logic. Very rough sketch of how to build up mathematics from logic and set theory. <a class="footnote-reference brackets" href="#first" id="id4">4</a> The difference between <span class="math notranslate nohighlight">\(\subseteq\)</span> and <span class="math notranslate nohighlight">\(\in\)</span>. That sets can be elements of sets. How to define numbers in set theory. The axiom defining the empty set <span class="math notranslate nohighlight">\(\emptyset\)</span>.</p>
 <p>Review: <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SkIp4pL3w">Logic</a> and <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/B1QX46L3P">Set Theory</a>.</p>
-</section>
-<section id="a-rational-number-is-a-set">
+</div>
+<div class="section" id="a-rational-number-is-a-set">
 <h3>2) A Rational Number is a Set<a class="headerlink" href="#a-rational-number-is-a-set" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Functions and relations (partly from my <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJ1cc-dDr">notes on Relations</a>). How to extend first-order logic by theories. Example: set theory extends FOL by adding the relation symbol <span class="math notranslate nohighlight">\(\in\)</span> (plus a little more) and  axioms).</p></li>
@@ -442,12 +448,12 @@ $<span class="math notranslate nohighlight">\((1,2)\not=(2,4) \ \ \ \textrm{but 
 <li><p>How to define <span class="math notranslate nohighlight">\(\equiv\)</span>. Notice that we want to say that <span class="math notranslate nohighlight">\((a,b)\equiv(c,d)\)</span> if <span class="math notranslate nohighlight">\(a\)</span> divided <span class="math notranslate nohighlight">\(b\)</span> equals <span class="math notranslate nohighlight">\(c\)</span> devided by <span class="math notranslate nohighlight">\(d\)</span>. But that would be circular: The definition of fractions should not be based on already assuming that we know how to divide (after all we want to define fractions in order to be able to do division of integers). What can we we do?</p></li>
 <li><p>We notice that in ordinary mathematics (but this notation is not available at the current stage of our development of formal mathematics), we have <span class="math notranslate nohighlight">\(\frac a b = \frac c d\)</span> if and only if <span class="math notranslate nohighlight">\(a\cdot d= b\cdot c\)</span>. Remember that we do assume that we have multiplication of integers available. With this trick, we can break the circle of explanations and define:
 $<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if } \ \ a\cdot d=b\cdot c\)</span>$</p></li>
-<li><p>We went on to define equivalence classes <a class="footnote-reference brackets" href="#class" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> $<span class="math notranslate nohighlight">\([(a,b)]_\equiv=\{(c,d) \mid (a,b)\equiv (c,d)\}\)</span>$</p></li>
+<li><p>We went on to define equivalence classes <a class="footnote-reference brackets" href="#class" id="id5">5</a> $<span class="math notranslate nohighlight">\([(a,b)]_\equiv=\{(c,d) \mid (a,b)\equiv (c,d)\}\)</span>$</p></li>
 <li><p>We can now define the rational numbers as the set of equivalence classes <span class="math notranslate nohighlight">\([(a,b)]_\equiv\)</span> where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary integer and <span class="math notranslate nohighlight">\(b\)</span> is a positive integer. (We need to insist that <span class="math notranslate nohighlight">\(b\not=0\)</span>.)</p></li>
 </ul>
 <p>At this stage there is a lot to reflect upon. We finished with a short summary and promised to come back to all of this in the next session.</p>
-</section>
-<section id="review-definition-by-equivalance-class">
+</div>
+<div class="section" id="review-definition-by-equivalance-class">
 <h3>3) Review: Definition by equivalance class<a class="headerlink" href="#review-definition-by-equivalance-class" title="Permalink to this heading">#</a></h3>
 <p>We reviewed everything we have done so far and added one important bullet point (and several footnotes):</p>
 <ul class="simple">
@@ -455,9 +461,9 @@ $<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if
 $<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if and only if } \ \ [(a,b)]_\equiv = [(c,d)]_\equiv\)</span>$</p></li>
 </ul>
 <p><em>Notice that from now on, we can use <span class="math notranslate nohighlight">\(=\)</span> again instead of <span class="math notranslate nohighlight">\(\equiv\)</span> since equivalence of fractions (left-hand side) is (“if and only if”) identity of equivalence classes (right-hand side).</em></p>
-<p>Notice that the sentence above contains three different notions of identity, namely, <span class="math notranslate nohighlight">\(\equiv\)</span> and <span class="math notranslate nohighlight">\(=\)</span> and “is”. <a class="footnote-reference brackets" href="#discuss" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
-</section>
-<section id="how-to-calculate-with-equivalence-classes">
+<p>Notice that the sentence above contains three different notions of identity, namely, <span class="math notranslate nohighlight">\(\equiv\)</span> and <span class="math notranslate nohighlight">\(=\)</span> and “is”. <a class="footnote-reference brackets" href="#discuss" id="id6">6</a></p>
+</div>
+<div class="section" id="how-to-calculate-with-equivalence-classes">
 <h3>4) How to Calculate with Equivalence Classes<a class="headerlink" href="#how-to-calculate-with-equivalence-classes" title="Permalink to this heading">#</a></h3>
 <p>In this session, we dive into some technical work and show that the rational numbers (as defined via equivalence classes) satisfy indeed the usual rules of arithmetic.</p>
 <ul class="simple">
@@ -466,20 +472,20 @@ $<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if
 </ul>
 <div class="math notranslate nohighlight">
 \[(a,b)\equiv (a',b') \ \  \&amp; \ \  (c,d) \equiv (c',d') \ \ \ \ \Longrightarrow \ \ \ \ (a\cdot c,b\cdot d)\equiv (a'\cdot c',b'\cdot d')\]</div>
-<p><em>Exercise:</em> Prove the statement above. Answer in the footnote.<a class="footnote-reference brackets" href="#abcd" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p>
+<p><em>Exercise:</em> Prove the statement above. Answer in the footnote.<a class="footnote-reference brackets" href="#abcd" id="id7">7</a></p>
 <p><em>Exercise:</em> Think about why in the proof above, one cannot replace “<span class="math notranslate nohighlight">\(\cdot\)</span>” by “<span class="math notranslate nohighlight">\(+\)</span>”.</p>
 <p>But, of course, we know (from our pre-understanding of fractions) that we can add fractions.</p>
 <p><em>Homework:</em> Prove that addition of rational numbers is independent of choice of representatives of equivalence classes.</p>
-<p>Answer in the footnote.<a class="footnote-reference brackets" href="#ad-bc" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p>
+<p>Answer in the footnote.<a class="footnote-reference brackets" href="#ad-bc" id="id8">8</a></p>
 <p><em>To summarize</em>, whatever <span class="math notranslate nohighlight">\(\equiv\)</span> and whatever the operation <span class="math notranslate nohighlight">\(\diamond\)</span>, to show that the operation <span class="math notranslate nohighlight">\(\diamond\)</span> can be extended to equivalence classes one needs to show that <span class="math notranslate nohighlight">\(\diamond\)</span> is independent of choice of representative, that is,</p>
 <div class="math notranslate nohighlight">
 \[\frac {t\equiv t' \ \ \ \ s \equiv s'} {t\diamond s \equiv t'\diamond s'}\]</div>
 <p>Thus, we not only formalized arithmetic on rational numbers, we also learned a general method of defining mathematical objects as equivalence classes and how to compute with such equivalence classes.</p>
-</section>
-<section id="excursion-into-history">
+</div>
+<div class="section" id="excursion-into-history">
 <h3>5) Excursion into History<a class="headerlink" href="#excursion-into-history" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Dedekind’s <a class="reference external" href="http://www.opera-platonis.de/dedekind/Dedekind_Was_sind_2.pdf">Was sind und was sollen die Zahlen?</a> introduces the natural numbers (in a naive set theory that we know today can easily be completely formalized). <a class="footnote-reference brackets" href="#dedekind" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p></li>
+<li><p>Dedekind’s <a class="reference external" href="http://www.opera-platonis.de/dedekind/Dedekind_Was_sind_2.pdf">Was sind und was sollen die Zahlen?</a> introduces the natural numbers (in a naive set theory that we know today can easily be completely formalized). <a class="footnote-reference brackets" href="#dedekind" id="id9">9</a></p></li>
 <li><p>The history of equivalence relations is discussed in Section 3 of Asghari’s <a class="reference external" href="https://link.springer.com/article/10.1007/s11229-018-1674-2">Equivalence: an attempt at a history of the idea</a> …</p></li>
 <li><p>The SEP:</p>
 <ul>
@@ -490,77 +496,68 @@ $<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if
 </li>
 </ul>
 <p>… &lt; more to come here &gt; …</p>
-</section>
-<section id="more-to-come-here">
+</div>
+<div class="section" id="more-to-come-here">
 <h3>6) … &lt; more to come here &gt; …<a class="headerlink" href="#more-to-come-here" title="Permalink to this heading">#</a></h3>
-</section>
-</section>
-<section id="epilogue">
+</div>
+</div>
+<div class="section" id="epilogue">
 <h2>Epilogue<a class="headerlink" href="#epilogue" title="Permalink to this heading">#</a></h2>
 <p>I want to come back to the question whether the formalization of mathematics was successful at breaking the circle of explanations. My short answer: Yes, from an engineering point of view. No, from a mathematical/logical point of view. No, from a philosophical point of view.</p>
 <p>From an engineering point of view, the success of software tools that are able to do mathematics shows that the circle of explanations can be broken down to simple operations on strings that can be performed on any computer.</p>
-<p>From a mathematical/logical point of view, Goedel’s incompleteness theorem shows that there can be no mathematical proof that the formalization of mathematics breaks the circle of explanations successfully. <a class="footnote-reference brackets" href="#goedel" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a></p>
+<p>From a mathematical/logical point of view, Goedel’s incompleteness theorem shows that there can be no mathematical proof that the formalization of mathematics breaks the circle of explanations successfully. <a class="footnote-reference brackets" href="#goedel" id="id10">10</a></p>
 <p>From a philosophical point of view, we need to view mathematics as a human activity. In this view, breaking the circle of explanations appears to be  a trick. For example, when we defined equality of fractions in order to define the rational numbers, we found the formal definition
 $<span class="math notranslate nohighlight">\((a,b)\equiv (c,d) \ \  \textrm{ if } \ \ a\cdot d=b\cdot c\)</span>$</p>
 <p>only by using our informal pre-understanding of fractions which told us that
 $<span class="math notranslate nohighlight">\(\frac a b = \frac c d \ \ \ \Longleftrightarrow \ \ \ \  a\cdot d=b\cdot c\)</span>$</p>
-<p>Mathematicians and software engineers may be  happy with this trick that Wittgenstein called throwing <a class="reference external" href="https://people.umass.edu/klement/tlp/tlp-hyperlinked.html#p6.54GER">“away the ladder after he has climbed up it”</a>, but as Wittgenstein himself admitted, this is not a philosphical interesting attitude: <a class="reference external" href="https://people.umass.edu/klement/tlp/tlp-hyperlinked.html#p7GER">“Whereof one cannot speak, thereof one must be silent”</a>. <a class="footnote-reference brackets" href="#wittgenstein" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p>
-</section>
-<section id="appendix-formal-set-theory">
+<p>Mathematicians and software engineers may be  happy with this trick that Wittgenstein called throwing <a class="reference external" href="https://people.umass.edu/klement/tlp/tlp-hyperlinked.html#p6.54GER">“away the ladder after he has climbed up it”</a>, but as Wittgenstein himself admitted, this is not a philosphical interesting attitude: <a class="reference external" href="https://people.umass.edu/klement/tlp/tlp-hyperlinked.html#p7GER">“Whereof one cannot speak, thereof one must be silent”</a>. <a class="footnote-reference brackets" href="#wittgenstein" id="id11">11</a></p>
+</div>
+<div class="section" id="appendix-formal-set-theory">
 <h2>Appendix: Formal Set Theory<a class="headerlink" href="#appendix-formal-set-theory" title="Permalink to this heading">#</a></h2>
 <p>I never taught a course on set theory, so I cannot confidently make recommendations of what the best textbooks and resources are. I select some that are available online and look reasonable.</p>
 <p>To see how a formal develop of set theory looks like try <a class="reference external" href="https://www.math.toronto.edu/weiss/set_theory.pdf">An Introduction to Set Theory</a> by William Weiss. Maybe start with the essence, the 11 axioms on page 117.</p>
 <p>After that, a shorter and more gentle introduction is <a class="reference external" href="https://math.berkeley.edu/~seanm/ZF_notes.pdf">Introduction to Set Theory</a> by Sean Murphy (contains some typos but seems to strike a good balance between formal development and explanation).</p>
 <p>Further explanations and background are in <a class="reference external" href="https://en.wikipedia.org/wiki/Set_theory">Wikipedia</a> and at the <a class="reference external" href="https://plato.stanford.edu/entries/set-theory/">SEP</a>.</p>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="circleexplanations" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>… more examples …</p>
-</aside>
-<aside class="footnote brackets" id="circleexplanations2" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>Even in mathematics, one can have a discussion of how successful exactly the endeavor of breaking the circle of explanations was. Certainly, breaking the circle of explanations comes at a price and requires, from a philosophical point of view, compromise. But a practical proof that it can be done is given by the modern AI systems that are able to do mathematics. Maybe we can come back to this at the end of this course.</p>
-</aside>
-<aside class="footnote brackets" id="naivesetheory" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>Naive set theory mixes logic and mathematics in an intuitive way without clarifying their relationship. Formal set theory starts from a small set of operations on strings (which can all easily be implemented on a computer), bootstraps from there first-order logic as a set of rules of string manipulation, defines set theory as one particular theory in first-order logic and goes on to show that all of mathematics can be encoded in set theory. Formal set theory is important because it separates mathematics from meta-mathematics (mathematics about mathematics), object language from meta-language, etc. This, in turn, allows us to escape the <a class="reference external" href="https://plato.stanford.edu/entries/russell-paradox/">famous paradoxes</a>. It also helps to establish set theory as a beautiful and rich area of mathematics in its own right.</p>
-</aside>
-<aside class="footnote brackets" id="first" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
-<p>We only introduced part of the language of set theory <span class="math notranslate nohighlight">\(\wedge, \vee, \neg, \forall,\exists, =\)</span> plus notation for the empty set <span class="math notranslate nohighlight">\(\emptyset\)</span> and comprehension <span class="math notranslate nohighlight">\(\{\ldots\}\)</span>. We talked about defining natural numbers and predicates such as <span class="math notranslate nohighlight">\(Even(x)\)</span>.</p>
-</aside>
-<aside class="footnote brackets" id="class" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
-<p>Here <em>class</em> is just another word for set, used for historical reasons. It would be perfectly fine to say “equivalence set” if it was not a very unusual expression. (Footnote: In set theory one sometimes makes a subtle distinction between sets and classes, but this is not relevant for our purposes.)</p>
-</aside>
-<aside class="footnote brackets" id="discuss" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
-<p>Discuss whether we were able to break the circle of explanations.</p>
-</aside>
-<aside class="footnote brackets" id="abcd" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
-<p><img alt="" src="https://hackmd.io/_uploads/r1wAYq5Fj.jpg" /></p>
-</aside>
-<aside class="footnote brackets" id="ad-bc" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
-<p><img alt="" src="https://hackmd.io/_uploads/r1JaFqcYj.jpg" /></p>
-</aside>
-<aside class="footnote brackets" id="dedekind" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
-<p>On page 379 one finds of <a class="reference external" href="https://gdz.sub.uni-goettingen.de/id/PPN23569441X">this edition</a>.</p>
+<dl class="footnote brackets">
+<dt class="label" id="circleexplanations"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>… more examples …</p>
+</dd>
+<dt class="label" id="circleexplanations2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Even in mathematics, one can have a discussion of how successful exactly the endeavor of breaking the circle of explanations was. Certainly, breaking the circle of explanations comes at a price and requires, from a philosophical point of view, compromise. But a practical proof that it can be done is given by the modern AI systems that are able to do mathematics. Maybe we can come back to this at the end of this course.</p>
+</dd>
+<dt class="label" id="naivesetheory"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Naive set theory mixes logic and mathematics in an intuitive way without clarifying their relationship. Formal set theory starts from a small set of operations on strings (which can all easily be implemented on a computer), bootstraps from there first-order logic as a set of rules of string manipulation, defines set theory as one particular theory in first-order logic and goes on to show that all of mathematics can be encoded in set theory. Formal set theory is important because it separates mathematics from meta-mathematics (mathematics about mathematics), object language from meta-language, etc. This, in turn, allows us to escape the <a class="reference external" href="https://plato.stanford.edu/entries/russell-paradox/">famous paradoxes</a>. It also helps to establish set theory as a beautiful and rich area of mathematics in its own right.</p>
+</dd>
+<dt class="label" id="first"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>We only introduced part of the language of set theory <span class="math notranslate nohighlight">\(\wedge, \vee, \neg, \forall,\exists, =\)</span> plus notation for the empty set <span class="math notranslate nohighlight">\(\emptyset\)</span> and comprehension <span class="math notranslate nohighlight">\(\{\ldots\}\)</span>. We talked about defining natural numbers and predicates such as <span class="math notranslate nohighlight">\(Even(x)\)</span>.</p>
+</dd>
+<dt class="label" id="class"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Here <em>class</em> is just another word for set, used for historical reasons. It would be perfectly fine to say “equivalence set” if it was not a very unusual expression. (Footnote: In set theory one sometimes makes a subtle distinction between sets and classes, but this is not relevant for our purposes.)</p>
+</dd>
+<dt class="label" id="discuss"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Discuss whether we were able to break the circle of explanations.</p>
+</dd>
+<dt class="label" id="abcd"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p><img alt="" src="https://hackmd.io/_uploads/r1wAYq5Fj.jpg" /></p>
+</dd>
+<dt class="label" id="ad-bc"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p><img alt="" src="https://hackmd.io/_uploads/r1JaFqcYj.jpg" /></p>
+</dd>
+<dt class="label" id="dedekind"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dd><p>On page 379 one finds of <a class="reference external" href="https://gdz.sub.uni-goettingen.de/id/PPN23569441X">this edition</a>.</p>
 <p><img alt="" src="https://i.imgur.com/j5oQtJw.png" /></p>
 <p>We see that Dedekind does recursion on the second argument, uses <span class="math notranslate nohighlight">\(1\)</span> as its base case instead of <span class="math notranslate nohighlight">\(0\)</span>, and writes <span class="math notranslate nohighlight">\('\)</span> for successor. Multiplication is treated similarly on page 382.</p>
-</aside>
-<aside class="footnote brackets" id="goedel" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
-<p>One should discuss whether the theorems of Goedel and Gentzen can be understood as a <em>philosophical</em> argument in favour of the success of breaking the circle of explanations.</p>
-</aside>
-<aside class="footnote brackets" id="wittgenstein" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
-<p>There are several hyperlinkded online editions of the Tractatus that visualize its tree structure: <a class="reference external" href="https://pbellon.github.io/tractatus-tree/#/">Pierre Bellon</a>, <a class="reference external" href="https://tractatus.xyz/">hhfpatrick</a>. I found these links via the <a class="reference external" href="http://tractatus.lib.uiowa.edu/">University of Iowa Tractatus Map</a> which also have a <a class="reference external" href="http://tractatus.lib.uiowa.edu/map/">beautiful map of the Tractatus</a>.</p>
-</aside>
-</section>
-</section>
+</dd>
+<dt class="label" id="goedel"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
+<dd><p>One should discuss whether the theorems of Goedel and Gentzen can be understood as a <em>philosophical</em> argument in favour of the success of breaking the circle of explanations.</p>
+</dd>
+<dt class="label" id="wittgenstein"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dd><p>There are several hyperlinkded online editions of the Tractatus that visualize its tree structure: <a class="reference external" href="https://pbellon.github.io/tractatus-tree/#/">Pierre Bellon</a>, <a class="reference external" href="https://tractatus.xyz/">hhfpatrick</a>. I found these links via the <a class="reference external" href="http://tractatus.lib.uiowa.edu/">University of Iowa Tractatus Map</a> which also have a <a class="reference external" href="http://tractatus.lib.uiowa.edu/map/">beautiful map of the Tractatus</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -594,12 +591,12 @@ $<span class="math notranslate nohighlight">\(\frac a b = \frac c d \ \ \ \Longl
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="prel-model-theory.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Model Theory</p>
       </div>
     </a>
     <a class="right-next"
