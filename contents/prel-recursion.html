@@ -378,6 +378,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-a-recursive-definition">Example of a Recursive Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-the-natural-numbers">The Definition of the Natural Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
 </ul>
             </nav>
@@ -392,9 +395,18 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="recursion">
 <h1>Recursion<a class="headerlink" href="#recursion" title="Permalink to this heading">#</a></h1>
-<p>(May 31)</p>
+<p>(May 31, June 13)</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Recursion is a fundamental concept of logic, mathematics, linguistics and philosophy, maybe even engineering, certainly computer science.</p>
-<p>It is closely related to paradoxes and vicious circles.</p>
+<p>… math is about the infinite, physics about the finite, from the point of view of physics the infinite is an approximation (abstraction) of the finite that makes sense for large quantities, from the point of view of math finite computations approximate infinite mathematical structures …</p>
+<p>… but can one reason about the infinite with finite means? Yes, using recursion (or even co-recursion) …</p>
+<p>… Chomsky argues that recursion is a defining feature of human languages, but see the debate between Chomsky and Everett …</p>
+<p>… GEB argues that recursion is related to the self, to consciousness, to …</p>
+</div>
+<div class="section" id="example-of-a-recursive-definition">
+<h2>Example of a Recursive Definition<a class="headerlink" href="#example-of-a-recursive-definition" title="Permalink to this heading">#</a></h2>
+<p>Recursion is closely related to paradoxes and vicious circles.</p>
 <p>In logic an example of a vicious circle can be a definition that defines sth, say A, in terms of A itself.</p>
 <p>But not all circular definitions are “vicious”.</p>
 <p>For example, the following definition of numbers in terms of numbers is perfectly fine.</p>
@@ -427,9 +439,10 @@ document.write(`
 <p><strong>Circle of Explanations:</strong> Note that there is something strange about this explanation: The whole point of the recursive definition is to define the infinite set
 <span class="math notranslate nohighlight">\(\sf N\)</span> by a <em>finite set of rules</em> without using “etc” or “…”. This works. In fact, recursive definitions are so powerful that all of mathematics (and computing) can be built on top of recursive definitions. But the human <em>explanation</em> of why it works has apparently to make use of a device like “etc”, see item 4 above. <a class="footnote-reference brackets" href="#wittgensteinsladder" id="id3">3</a></p>
 <p><strong>Question:</strong> In what sense does our definition define numbers? We said above “think of the string <code class="docutils literal notranslate"><span class="pre">|</span></code> as the number <span class="math notranslate nohighlight">\(1\)</span>”. What does “think of as” mean here? We could say that the number <span class="math notranslate nohighlight">\(1\)</span> is the semantics of the syntax <code class="docutils literal notranslate"><span class="pre">|</span></code>, but this is not an explanation, just a restatement of “”think of the string <code class="docutils literal notranslate"><span class="pre">|</span></code> as the number <span class="math notranslate nohighlight">\(1\)</span>”.</p>
-<hr class="docutils" />
-<p><strong>Important Variation on the Definition of Numbers:</strong></p>
-<p>The definition of the counting numbers via <code class="docutils literal notranslate"><span class="pre">|</span></code> has some small drawbacks and I want to replace it by the official definition. Let us recall the definition:</p>
+</div>
+<div class="section" id="the-definition-of-the-natural-numbers">
+<h2>The Definition of the Natural Numbers<a class="headerlink" href="#the-definition-of-the-natural-numbers" title="Permalink to this heading">#</a></h2>
+<p>The official definition of natural numbers in mathematics is a slight variation of the one above. The definition of the counting numbers via <code class="docutils literal notranslate"><span class="pre">|</span></code> has some drawbacks. Let us recall the definition:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> is a number.</p></li>
 <li><p>For all <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">|n</span></code> is a number if <code class="docutils literal notranslate"><span class="pre">n</span></code> is a number.</p></li>
@@ -439,11 +452,21 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">O</span></code> is a natural number.</p></li>
 <li><p>If <code class="docutils literal notranslate"><span class="pre">n</span></code> is a natural number, then <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">n</span></code> is a natural number.</p></li>
 </ul>
+<p>Here is another notation one often finds</p>
+<div class="math notranslate nohighlight">
+\[ \frac{}{ 0 \in \mathbb N}\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{n \in \mathbb N}{\sf S \it n \sf \in \mathbb N}\]</div>
+<p>or also</p>
+<div class="math notranslate nohighlight">
+\[ \frac{}{\sf O : N}\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{\it n \sf : N}{\sf S \it n \sf : N}\]</div>
 <p><strong>Remark on Semantics:</strong> <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">n</span></code> is also known as the successor function. We often think of functions as mathematical objects being in the realm of semantics. <code class="docutils literal notranslate"><span class="pre">S</span></code> can be understood as living both in syntax and semantics. Or maybe we can say that <code class="docutils literal notranslate"><span class="pre">S</span></code> is syntax that is its own semantics. What I mean by this is that writing <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">n</span></code> is on the one hand just symbol manipulation but on the other hand it computes <span class="math notranslate nohighlight">\(n+1\)</span>.</p>
 <p>If we want to highlight the order in which numbers are built we can use parentheses and write <code class="docutils literal notranslate"><span class="pre">S(S(S</span> <span class="pre">O))</span></code> instead of <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">S</span> <span class="pre">S</span> <span class="pre">O</span></code>. If we want to be brief we may also write <code class="docutils literal notranslate"><span class="pre">SSSO</span></code>.</p>
 <p>… add some history with links to Dedekind, Peano, …</p>
 <p>https://github.com/mdnahas/Peano_Book/blob/master/Peano.pdf page 22,23</p>
-<hr class="docutils" />
+</div>
 <div class="section" id="further-reading">
 <h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <p>For an introduction on recursion read</p>
@@ -536,6 +559,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-a-recursive-definition">Example of a Recursive Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-the-natural-numbers">The Definition of the Natural Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
 </ul>
   </nav></div>
