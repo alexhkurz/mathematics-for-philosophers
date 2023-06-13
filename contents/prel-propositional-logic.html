@@ -382,6 +382,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-of-propositional-logic">Syntax of Propositional Logic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operational-semantics-truth-tables">Operational Semantics: Truth Tables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#denotational-semantics-venn-diagrams">Denotational Semantics: Venn Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-operational-and-denotational-semantics">Comparing Operational and Denotational Semantics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-method-of-indirect-truth-tables">Appendix: The Method of Indirect Truth Tables</a></li>
 </ul>
             </nav>
@@ -402,11 +403,12 @@ document.write(`
 <p>The distinction between operational and denotational semantics comes from programming languages and is not usually applied to propositional logic. But introducing it here is an opportunity to explain ideas that may be important later on. For the purposes of this section, operational semantics refers to the semantics via truth tables while denotational semantics refers to the semantics via Venn diagrams (the set-theoretic semantics).</p>
 <p>… Claim: the distinction syntax and semantics cannot itself be formalized (discuss whether this is another example of a circle of explanations) …</p>
 <p>… Brouwer invented intuitionism to make clear that we cannot break the circle of explanations, but then his followers (from Heyting to Voevodsky) formalized intuitionistic logic and it is now at the heart of the most heroic attempts (Coq, Agda, Lean, HoTT, etc) to break the circle of explanations … could be interesting to explore this in more depth …</p>
+<p>… in our discussions, this section has taken place over at least 3 different sessions …</p>
 <div class="section" id="revision">
 <h2>Revision<a class="headerlink" href="#revision" title="Permalink to this heading">#</a></h2>
 <p>Show that the following formulas are valid (tautologies).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a20d210d-4a67-4bad-a85c-ec5379f5fd0a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-a20d210d-4a67-4bad-a85c-ec5379f5fd0a" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-1440f9eb-32b5-4c52-92b7-f58781874bf8">
+<span class="eqno">(1)<a class="headerlink" href="#equation-1440f9eb-32b5-4c52-92b7-f58781874bf8" title="Permalink to this equation">#</a></span>\[\begin{gather}
 P \vee \neg P\\
 (P \to Q) \to (\neg Q\to \neg P)\\
 P \to (Q \to P)\\
@@ -415,8 +417,8 @@ P \to (Q \to P)\\
 (P\vee Q)\wedge (\neg P\vee R)\to Q\vee R\\
 \end{gather}\]</div>
 <p>Show that the following formulas are not valid. Find counter-examples and express them in natural language.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-688c620e-3025-4429-9835-d0a458848dcf">
-<span class="eqno">(2)<a class="headerlink" href="#equation-688c620e-3025-4429-9835-d0a458848dcf" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-7c810612-0d83-4dc1-a902-c5c1d0a2cce8">
+<span class="eqno">(2)<a class="headerlink" href="#equation-7c810612-0d83-4dc1-a902-c5c1d0a2cce8" title="Permalink to this equation">#</a></span>\[\begin{gather}
 (P\vee Q)\to (P\wedge Q)\\
 (P\to Q)\to (\neg P\to \neg Q)\\
 \end{gather}\]</div>
@@ -435,8 +437,8 @@ P \to (Q \to P)\\
 </ul>
 <p>where <span class="math notranslate nohighlight">\(\phi,\psi\)</span> refer recursively to formulas of propositional logic.</p>
 <p>We also use the following <strong>abbreviations</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eac576cb-11be-4c58-838b-865a2ba58a11">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eac576cb-11be-4c58-838b-865a2ba58a11" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e9c9dad9-2052-4775-810d-b6ebb7d5fbae">
+<span class="eqno">(3)<a class="headerlink" href="#equation-e9c9dad9-2052-4775-810d-b6ebb7d5fbae" title="Permalink to this equation">#</a></span>\[\begin{align}
 P\to Q &amp;= \neg P \vee Q\\
 P\leftrightarrow Q &amp; = (P\to Q)\wedge (Q\to P)
 \end{align}\]</div>
@@ -470,6 +472,81 @@ $<span class="math notranslate nohighlight">\((((\neg P)\wedge (\neg Q))\wedge (
 </div>
 <div class="section" id="denotational-semantics-venn-diagrams">
 <h2>Denotational Semantics: Venn Diagrams<a class="headerlink" href="#denotational-semantics-venn-diagrams" title="Permalink to this heading">#</a></h2>
+<p>We all know about Venn diagrams. Venn diagrams explain propositional logic by mapping each proposition to a set and by replacing the logical operations by set-theoretic ones.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Boolean Logic</p></th>
+<th class="text-center head"><p>Venn Diagrams</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Propositions <span class="math notranslate nohighlight">\(A,B,\ldots\)</span></p></td>
+<td class="text-center"><p>Sets <span class="math notranslate nohighlight">\(A,B,\ldots\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(A\wedge B\)</span></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Intersection_(set_theory)"><span class="math notranslate nohighlight">\(A\cap B\)</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(A\vee B\)</span></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Union_(set_theory)"><span class="math notranslate nohighlight">\(A\cup B\)</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\neg A\)</span></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Complement_(set_theory)"><span class="math notranslate nohighlight">\(A^c = U\setminus A\)</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(A\to B\)</span></p></td>
+<td class="text-center"><p>??</p></td>
+</tr>
+</tbody>
+</table>
+<p>Intersection and union seem rather straight-forward (even if we had some debate here as well).</p>
+<p>Complement and implication are more subtle. They are also related because in Boolean logic <span class="math notranslate nohighlight">\(A\to B = \neg A\vee B\)</span>.<a class="footnote-reference brackets" href="#intuitionistic" id="id2">2</a></p>
+<p>… a remark on why negation requires us to introduce a universe <span class="math notranslate nohighlight">\(U\)</span> …</p>
+<p>Now let us come back to the implication <span class="math notranslate nohighlight">\(A\to B\)</span>.</p>
+<p>The implication <span class="math notranslate nohighlight">\(A\to B\)</span> is often illustrated as via the Venn diagram for <a class="reference external" href="https://en.wikipedia.org/wiki/Subset"><span class="math notranslate nohighlight">\(A\subseteq B\)</span></a>. But while often useful, this does not work for a translation of propositions to sets because <span class="math notranslate nohighlight">\(A\subseteq B\)</span> is not a set but a proposition.</p>
+<p>So which set should represent <span class="math notranslate nohighlight">\(A\to B\)</span>?</p>
+<p>We use that <span class="math notranslate nohighlight">\(A\to B=\neg A\vee B\)</span> in Boolean logic and represent <span class="math notranslate nohighlight">\(A\to B\)</span> by the Venn diagram for <a class="reference external" href="https://en.wikipedia.org/wiki/Material_conditional"><span class="math notranslate nohighlight">\(A^c\cup B\)</span></a>.</p>
+<p>There is still something missing. When we reason in propositional logic, we want to prove that certain propositions are true, for example, <a class="footnote-reference brackets" href="#true" id="id3">3</a></p>
+<div class="math notranslate nohighlight">
+\[P\vee \neg P = \sf True.\]</div>
+<p>Or, we may ask to find truth-values for <span class="math notranslate nohighlight">\(P,Q\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[(P\vee Q)\to (P\wedge Q) = \sf False.\]</div>
+<p>Thus, in order to complete the table which assigns sets to propositions, we also need translate <span class="math notranslate nohighlight">\(\sf True\)</span> and <span class="math notranslate nohighlight">\(\sf False\)</span>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Boolean Logic</p></th>
+<th class="text-center head"><p>Venn Diagrams</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Propositions <span class="math notranslate nohighlight">\(A,B,\ldots\)</span></p></td>
+<td class="text-center"><p>Sets <span class="math notranslate nohighlight">\(A,B,\ldots\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(A\wedge B\)</span></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Intersection_(set_theory)"><span class="math notranslate nohighlight">\(A\cap B\)</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(A\vee B\)</span></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Union_(set_theory)"><span class="math notranslate nohighlight">\(A\cup B\)</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\neg A\)</span></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Complement_(set_theory)"><span class="math notranslate nohighlight">\(A^c = U\setminus A\)</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(A\to B\)</span></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Material_conditional"><span class="math notranslate nohighlight">\(A^c\cup B\)</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\sf True\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(U\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\sf False\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{\}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>We see now that <span class="math notranslate nohighlight">\(A\subset B\)</span> is not the translation of <span class="math notranslate nohighlight">\(A\to B\)</span> to Venn diagrams, but rather (equivalent to) the translation of <span class="math notranslate nohighlight">\(A\to B=\sf True\)</span>:</p>
+<p><strong>Exercise:</strong> Show that <span class="math notranslate nohighlight">\(A\subseteq B\)</span> if and only if <span class="math notranslate nohighlight">\(A^c \cup B = U\)</span>.</p>
+</div>
+<div class="section" id="comparing-operational-and-denotational-semantics">
+<h2>Comparing Operational and Denotational Semantics<a class="headerlink" href="#comparing-operational-and-denotational-semantics" title="Permalink to this heading">#</a></h2>
+<p>… this is called <em>adequacy</em> in programming languages …</p>
 <p>…</p>
 </div>
 <div class="section" id="appendix-the-method-of-indirect-truth-tables">
@@ -480,25 +557,31 @@ $<span class="math notranslate nohighlight">\((((\neg P)\wedge (\neg Q))\wedge (
 <p>The algorithm proceeds as follows.</p>
 <ul class="simple">
 <li><p>Write the formula as its syntax tree.</p></li>
-<li><p>Label the root as 0. <a class="footnote-reference brackets" href="#root" id="id2">2</a></p></li>
+<li><p>Label the root as 0. <a class="footnote-reference brackets" href="#root" id="id4">4</a></p></li>
 <li><p>Use the truth table of the connective at the root to draw conclusions about the truth values of the children.</p></li>
 <li><p>Proceed recursively through the syntax tree.</p></li>
 <li><p>If you need to make a guess to proceed, make a copy of the syntax tree so that you can backtrack and investigate other possible choices later.</p></li>
-<li><p>If your current choice does not lead to a contradiction, this choice exhibits a counterexample to <span class="math notranslate nohighlight">\(\phi\)</span>. Output “No” and the counterexample. <a class="footnote-reference brackets" href="#counterexample" id="id3">3</a></p></li>
-<li><p>If your currenct choice leads to a contradiction backtrack. If all choices lead to a contradiction <span class="math notranslate nohighlight">\(\phi\)</span> is valid. Output “Yes”. <a class="footnote-reference brackets" href="#valid" id="id4">4</a></p></li>
+<li><p>If your current choice does not lead to a contradiction, this choice exhibits a counterexample to <span class="math notranslate nohighlight">\(\phi\)</span>. Output “No” and the counterexample. <a class="footnote-reference brackets" href="#counterexample" id="id5">5</a></p></li>
+<li><p>If your currenct choice leads to a contradiction backtrack. If all choices lead to a contradiction <span class="math notranslate nohighlight">\(\phi\)</span> is valid. Output “Yes”. <a class="footnote-reference brackets" href="#valid" id="id6">6</a></p></li>
 </ul>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="semantictableaux"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>In logic and computer science this method is known as <em>propositional tableaux</em> or <em>semantic tableaux</em>. The main difference is that indirect turth tables are more instructive to do pen-and-paper, while propositional tableaux are easier to make precise as an algorithm that can be implemented on a computer. But the basic idea is the same, namely to try to avoid to explicitly write out all rows of a truth table (which grows exponentially in the number of propositional variables).</p>
 </dd>
-<dt class="label" id="root"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="intuitionistic"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>This is where we started an excursion into <a class="reference external" href="https://plato.stanford.edu/entries/intuitionism/">intutionstic logic</a>, mainly to say that there are logics in which these three connectives have a different meaning than in Boolean logic. We also talked about <a class="reference external" href="https://en.wikipedia.org/wiki/L._E._J._Brouwer">Brouwer</a>, the circle of explanations, his relationship to Hilbert and Heyting and Brouwer’s legacy and influence on computer science and the formalization of mathematics in proof assistants such as Coq, Agda and Lean. An interesting article on Brouwer the person and the philosopher is <em>Brouwer’s Intuitionism</em> by Victor Pambuccian (2022) … https://www.youtube.com/watch?v=-zDQclKXN1Y …</p>
+</dd>
+<dt class="label" id="true"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Many proof systems of propositional logic do not write the part <span class="math notranslate nohighlight">\(=\sf True\)</span>. But that doesn’t mean that it is not there “semantically”.</p>
+</dd>
+<dt class="label" id="root"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>I formulate the algorithm as an algorithm for refutability, searching for an interpretation <span class="math notranslate nohighlight">\(v\)</span> under which <span class="math notranslate nohighlight">\(\phi\)</span> evaluates to 0, that is, <span class="math notranslate nohighlight">\(\sem{\phi}_v=0\)</span>. The same method, when starting with the label 1 at the root can be used to as an algorithm for satisfiablity, searching for an interpretation <span class="math notranslate nohighlight">\(v\)</span> under which <span class="math notranslate nohighlight">\(\phi\)</span> evaluates to <span class="math notranslate nohighlight">\(1\)</span>, that is <span class="math notranslate nohighlight">\(\sem{\phi}_v=1\)</span>. Note that the algorithm for refutability on input <span class="math notranslate nohighlight">\(\phi\)</span> performs the same steps as the algorithm for satisfiability on input <span class="math notranslate nohighlight">\(\neg\phi\)</span>. It follows that refutability and satisfiability are equivalent problems. For the purposes of this lecture, I find the algorithm for refutability more intuitive, but in the literature it is satisfiability which plays the dominant role.</p>
 </dd>
-<dt class="label" id="counterexample"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="counterexample"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>If there is a choice that does not  lead to a contradiction, we know that the equation <span class="math notranslate nohighlight">\(\phi=0\)</span> has a solution, that is, that there is an interpretation such that <span class="math notranslate nohighlight">\(\neg\phi = 1\)</span>. This interpretation is a counterexample to <span class="math notranslate nohighlight">\(\phi\)</span> being valid.</p>
 </dd>
-<dt class="label" id="valid"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="valid"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p>If all choices lead to a contradiction, we know that the equation <span class="math notranslate nohighlight">\(\phi=0\)</span> has no solution, that is, that <span class="math notranslate nohighlight">\(\neg\phi\)</span> is not satisfiable, that is, that <span class="math notranslate nohighlight">\(\phi\)</span> is valid.</p>
 </dd>
 </dl>
@@ -576,6 +659,7 @@ $<span class="math notranslate nohighlight">\((((\neg P)\wedge (\neg Q))\wedge (
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-of-propositional-logic">Syntax of Propositional Logic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operational-semantics-truth-tables">Operational Semantics: Truth Tables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#denotational-semantics-venn-diagrams">Denotational Semantics: Venn Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-operational-and-denotational-semantics">Comparing Operational and Denotational Semantics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-method-of-indirect-truth-tables">Appendix: The Method of Indirect Truth Tables</a></li>
 </ul>
   </nav></div>

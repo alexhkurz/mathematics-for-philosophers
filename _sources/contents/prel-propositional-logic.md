@@ -14,6 +14,8 @@ The distinction between operational and denotational semantics comes from progra
 
 ... Brouwer invented intuitionism to make clear that we cannot break the circle of explanations, but then his followers (from Heyting to Voevodsky) formalized intuitionistic logic and it is now at the heart of the most heroic attempts (Coq, Agda, Lean, HoTT, etc) to break the circle of explanations ... could be interesting to explore this in more depth ...
 
+... in our discussions, this section has taken place over at least 3 different sessions ...
+
 ## Revision
 
 Show that the following formulas are valid (tautologies).
@@ -93,7 +95,64 @@ The next result is important. It follows directly from the definitions and the f
 
 ## Denotational Semantics: Venn Diagrams
 
+We all know about Venn diagrams. Venn diagrams explain propositional logic by mapping each proposition to a set and by replacing the logical operations by set-theoretic ones.
+
+| Boolean Logic | Venn Diagrams |
+|:---:|:---:|
+| Propositions $A,B,\ldots$ | Sets $A,B,\ldots$ |
+| $A\wedge B$ | [$A\cap B$](https://en.wikipedia.org/wiki/Intersection_(set_theory)) |
+| $A\vee B$ | [$A\cup B$](https://en.wikipedia.org/wiki/Union_(set_theory)) |
+| $\neg A$ | [$A^c = U\setminus A$](https://en.wikipedia.org/wiki/Complement_(set_theory)) |
+| $A\to B$ | ?? |
+
+Intersection and union seem rather straight-forward (even if we had some debate here as well). 
+
+Complement and implication are more subtle. They are also related because in Boolean logic $A\to B = \neg A\vee B$.[^intuitionistic] 
+
+[^intuitionistic]: This is where we started an excursion into [intutionstic logic](https://plato.stanford.edu/entries/intuitionism/), mainly to say that there are logics in which these three connectives have a different meaning than in Boolean logic. We also talked about [Brouwer](https://en.wikipedia.org/wiki/L._E._J._Brouwer), the circle of explanations, his relationship to Hilbert and Heyting and Brouwer's legacy and influence on computer science and the formalization of mathematics in proof assistants such as Coq, Agda and Lean. An interesting article on Brouwer the person and the philosopher is *Brouwer’s Intuitionism* by Victor Pambuccian (2022) ... https://www.youtube.com/watch?v=-zDQclKXN1Y ... 
+
+... a remark on why negation requires us to introduce a universe $U$ ...
+
+Now let us come back to the implication $A\to B$.
+
+The implication $A\to B$ is often illustrated as via the Venn diagram for [$A\subseteq B$](https://en.wikipedia.org/wiki/Subset). But while often useful, this does not work for a translation of propositions to sets because $A\subseteq B$ is not a set but a proposition.
+
+So which set should represent $A\to B$? 
+
+We use that $A\to B=\neg A\vee B$ in Boolean logic and represent $A\to B$ by the Venn diagram for [$A^c\cup B$](https://en.wikipedia.org/wiki/Material_conditional).
+
+There is still something missing. When we reason in propositional logic, we want to prove that certain propositions are true, for example, [^true]
+
+[^true]: Many proof systems of propositional logic do not write the part $=\sf True$. But that doesn't mean that it is not there "semantically".
+
+$$P\vee \neg P = \sf True.$$
+
+Or, we may ask to find truth-values for $P,Q$ such that 
+
+$$(P\vee Q)\to (P\wedge Q) = \sf False.$$
+
+Thus, in order to complete the table which assigns sets to propositions, we also need translate $\sf True$ and $\sf False$.
+
+| Boolean Logic | Venn Diagrams |
+|:---:|:---:|
+| Propositions $A,B,\ldots$ | Sets $A,B,\ldots$ |
+| $A\wedge B$ | [$A\cap B$](https://en.wikipedia.org/wiki/Intersection_(set_theory)) |
+| $A\vee B$ | [$A\cup B$](https://en.wikipedia.org/wiki/Union_(set_theory)) |
+| $\neg A$ | [$A^c = U\setminus A$](https://en.wikipedia.org/wiki/Complement_(set_theory)) |
+| $A\to B$ |  [$A^c\cup B$](https://en.wikipedia.org/wiki/Material_conditional) |
+| $\sf True$ | $U$ |
+| $\sf False$ | $\{\}$ |
+
+We see now that $A\subset B$ is not the translation of $A\to B$ to Venn diagrams, but rather (equivalent to) the translation of $A\to B=\sf True$:
+
+**Exercise:** Show that $A\subseteq B$ if and only if $A^c \cup B = U$.
+
+## Comparing Operational and Denotational Semantics
+
+... this is called *adequacy* in programming languages ...
+
 ...
+
 
 ## Appendix: The Method of Indirect Truth Tables
 
