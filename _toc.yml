@@ -6,6 +6,13 @@ format: jb-book
 root: intro.md
 
 parts:
+- caption: Preliminaries
+  chapters:
+  - file: contents/prel-introduction.md
+  - file: contents/prel-recursion.md
+  - file: contents/prel-propositional-logic.md
+  - file: contents/prel-set-theory.md
+  - file: contents/prel-model-theory.md
 - caption: Under Construction (Logic)
   chapters:
   - file: contents/equivalence-relations.md
