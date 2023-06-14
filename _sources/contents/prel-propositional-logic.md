@@ -143,16 +143,23 @@ Thus, in order to complete the table which assigns sets to propositions, we also
 | $\sf True$ | $U$ |
 | $\sf False$ | $\{\}$ |
 
-We see now that $A\subset B$ is not the translation of $A\to B$ to Venn diagrams, but rather (equivalent to) the translation of $A\to B=\sf True$:
+We see now that $A\subseteq B$ is not the translation of $A\to B$ to Venn diagrams, but rather (equivalent to) the translation of $A\to B=\sf True$:
 
 **Exercise:** Show that $A\subseteq B$ if and only if $A^c \cup B = U$.
 
 ## Comparing Operational and Denotational Semantics
 
-... this is called *adequacy* in programming languages ...
+We have now two different semantics and they should be equivalent in some sense. (The equivalence of operational and denotational semantics is called *adequacy* in programming languages.)
 
-...
+<img src="../img/adequacy-propositional-logic.png" height="200">
 
+If we take a formula of propositional logic $\phi$ on the left and interpret it via truth tables and via Venn diagrams, these two interpretation should be equivalent.
+
+The upper arrow can just map a formula to its truth table.
+
+But what about the lower arrow? In order to assign a Venn diagram to a formula we first need to construct the elements of the sets that will appear in the diagram. In other words, in the notation from the previous section, we need to construct the universe $U$.
+
+This is a deep and beautiful problem that we can discuss some other time ... 
 
 ## Appendix: The Method of Indirect Truth Tables
 

@@ -407,8 +407,8 @@ document.write(`
 <div class="section" id="revision">
 <h2>Revision<a class="headerlink" href="#revision" title="Permalink to this heading">#</a></h2>
 <p>Show that the following formulas are valid (tautologies).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1440f9eb-32b5-4c52-92b7-f58781874bf8">
-<span class="eqno">(1)<a class="headerlink" href="#equation-1440f9eb-32b5-4c52-92b7-f58781874bf8" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-82ce505d-a706-4653-9aa1-9fbd0966370d">
+<span class="eqno">(1)<a class="headerlink" href="#equation-82ce505d-a706-4653-9aa1-9fbd0966370d" title="Permalink to this equation">#</a></span>\[\begin{gather}
 P \vee \neg P\\
 (P \to Q) \to (\neg Q\to \neg P)\\
 P \to (Q \to P)\\
@@ -417,8 +417,8 @@ P \to (Q \to P)\\
 (P\vee Q)\wedge (\neg P\vee R)\to Q\vee R\\
 \end{gather}\]</div>
 <p>Show that the following formulas are not valid. Find counter-examples and express them in natural language.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7c810612-0d83-4dc1-a902-c5c1d0a2cce8">
-<span class="eqno">(2)<a class="headerlink" href="#equation-7c810612-0d83-4dc1-a902-c5c1d0a2cce8" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-ea056841-2df4-4003-96bd-a931df2a214f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ea056841-2df4-4003-96bd-a931df2a214f" title="Permalink to this equation">#</a></span>\[\begin{gather}
 (P\vee Q)\to (P\wedge Q)\\
 (P\to Q)\to (\neg P\to \neg Q)\\
 \end{gather}\]</div>
@@ -437,8 +437,8 @@ P \to (Q \to P)\\
 </ul>
 <p>where <span class="math notranslate nohighlight">\(\phi,\psi\)</span> refer recursively to formulas of propositional logic.</p>
 <p>We also use the following <strong>abbreviations</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9c9dad9-2052-4775-810d-b6ebb7d5fbae">
-<span class="eqno">(3)<a class="headerlink" href="#equation-e9c9dad9-2052-4775-810d-b6ebb7d5fbae" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-49ef10f1-a2ee-4c53-8e2f-0c00304d73ef">
+<span class="eqno">(3)<a class="headerlink" href="#equation-49ef10f1-a2ee-4c53-8e2f-0c00304d73ef" title="Permalink to this equation">#</a></span>\[\begin{align}
 P\to Q &amp;= \neg P \vee Q\\
 P\leftrightarrow Q &amp; = (P\to Q)\wedge (Q\to P)
 \end{align}\]</div>
@@ -541,13 +541,17 @@ $<span class="math notranslate nohighlight">\((((\neg P)\wedge (\neg Q))\wedge (
 </tr>
 </tbody>
 </table>
-<p>We see now that <span class="math notranslate nohighlight">\(A\subset B\)</span> is not the translation of <span class="math notranslate nohighlight">\(A\to B\)</span> to Venn diagrams, but rather (equivalent to) the translation of <span class="math notranslate nohighlight">\(A\to B=\sf True\)</span>:</p>
+<p>We see now that <span class="math notranslate nohighlight">\(A\subseteq B\)</span> is not the translation of <span class="math notranslate nohighlight">\(A\to B\)</span> to Venn diagrams, but rather (equivalent to) the translation of <span class="math notranslate nohighlight">\(A\to B=\sf True\)</span>:</p>
 <p><strong>Exercise:</strong> Show that <span class="math notranslate nohighlight">\(A\subseteq B\)</span> if and only if <span class="math notranslate nohighlight">\(A^c \cup B = U\)</span>.</p>
 </div>
 <div class="section" id="comparing-operational-and-denotational-semantics">
 <h2>Comparing Operational and Denotational Semantics<a class="headerlink" href="#comparing-operational-and-denotational-semantics" title="Permalink to this heading">#</a></h2>
-<p>… this is called <em>adequacy</em> in programming languages …</p>
-<p>…</p>
+<p>We have now two different semantics and they should be equivalent in some sense. (The equivalence of operational and denotational semantics is called <em>adequacy</em> in programming languages.)</p>
+<a class="reference internal image-reference" href="../_images/adequacy-propositional-logic.png"><img alt="../_images/adequacy-propositional-logic.png" src="../_images/adequacy-propositional-logic.png" style="height: 200px;" /></a>
+<p>If we take a formula of propositional logic <span class="math notranslate nohighlight">\(\phi\)</span> on the left and interpret it via truth tables and via Venn diagrams, these two interpretation should be equivalent.</p>
+<p>The upper arrow can just map a formula to its truth table.</p>
+<p>But what about the lower arrow? In order to assign a Venn diagram to a formula we first need to construct the elements of the sets that will appear in the diagram. In other words, in the notation from the previous section, we need to construct the universe <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p>This is a deep and beautiful problem that we can discuss some other time …</p>
 </div>
 <div class="section" id="appendix-the-method-of-indirect-truth-tables">
 <h2>Appendix: The Method of Indirect Truth Tables<a class="headerlink" href="#appendix-the-method-of-indirect-truth-tables" title="Permalink to this heading">#</a></h2>
