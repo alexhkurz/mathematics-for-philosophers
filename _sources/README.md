@@ -4,7 +4,7 @@
 
 ## mathematics for philosophers
 
-This is the repo in which I, a mathematician, keep my notes on ongoing discussions with an undergraduate philosophy student, Johanna Speiser.
+I have been teaching many courses on mathematical logic. Here I want to think about how and what logic I would like to teach to philosophy students. I change the material here whenever I get a chance to discuss it with philosophy students.
 
 The notes are written together while discussing the topic. Unfortunately, the notes do not show the discussions as they happened and do not contain much information about the teaching and learning. Rather the notes are the frozen outcome of the learning process. Their main purpose is to remind the authors of the work we have done and help motivating us to add more in the future.
 
